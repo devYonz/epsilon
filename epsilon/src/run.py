@@ -2,14 +2,23 @@ import click
 import json
 import numpy as np
 import logging
+import os, sys
 
 from ml.feature import Feature
 from ml.logistic import LogisticClassifier
 from classifiers import build_neural_classifier
 from processor import get_text_body, create_dictionary, transform_text
 
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 logger = logging.getLogger(__name__)
-# logger.setLevel(logging.DEBUG)
+
+handler = logging.StreamHandler(sys.stdout)
+formatter = logging.Formatter('%(asctime)s - %(threadName)s - %(module)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+
+logging.basicConfig(level=logging.DEBUG, handlers=[handler])
+
+# log.setLevel(logging.DEBUG)
 
 PROJECT_KEY = 'projects'
 ISSUES_KEY = 'issues'
@@ -109,7 +118,7 @@ def main(data, spam):
     n_values = np.max(train_labels) + 1
     train_labels_reshape = np.eye(n_values)[train_labels]
 
-    neural_net_classifiers = build_neural_classifier()
+    neural_net_classifiers = build_neural_classifier(2000)
 
     for classifier in neural_net_classifiers:
         print(" ======== ", classifier.__class__.__name__)

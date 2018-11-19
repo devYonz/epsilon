@@ -8,7 +8,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
 import logging
 
-logger = logging.getLogger(__name__)
+log = logging.getLogger(__name__)
 
 
 class CVClassifier(BaseEstimator):
@@ -81,10 +81,10 @@ class NNClassifier(CVClassifier):
         self.out = None
 
     def fit(self, X, y=None):
-        print("X Shape: {}, {} \n Y Shape: {}, {}".format(X.shape, X[0], y.shape, y[0]))
+        # log.debug("X Shape: {}, {} \n Y Shape: {}, {}".format(X.shape, X[0], y.shape, y[0]))
 
         if y is None:
-            logger.error("No labels input to fit!!")
+            log.error("No labels input to fit!!")
             assert 0
         # Full reset betweeen fit() calls
         tf.reset_default_graph()
@@ -94,7 +94,7 @@ class NNClassifier(CVClassifier):
         out_ph = tf.placeholder(tf.int32, (None, y.shape[1]))
         self.out = self.tf_apply_func(self.in_ph, y.shape[1])
         # loss = tf.reduce_mean(tf.square(self.out - out_ph))
-        #print(out_ph)
+        # print(out_ph)
         loss = tf.reduce_mean(
             tf.nn.softmax_cross_entropy_with_logits_v2(labels=out_ph,
                                                        logits=self.out))
@@ -108,17 +108,17 @@ class NNClassifier(CVClassifier):
             r = self.session.run([train, loss, self.out],
                                  feed_dict={self.in_ph: X, out_ph: y})
             self.loss.append(r[1])
-            #if i == self.training_rounds - 1:
-            if not(i % 20):
-                logger.debug("#  Training loss at round %s: %s" % (i, r[1]))
+            # if i == self.training_rounds - 1:
+            if not(i % 200):
+                log.info("#  Training loss at round %s: %s" % (i, r[1]))
         plt.plot(self.loss)
         plt.show()
         return self
 
     def predict(self, X):
         result = self.session.run([self.out], feed_dict={self.in_ph: X})[0]
-        # logger.debug("Result Shape:{}".format(result.shape))
-        # logger.debug("Results: {}".format(result))
+        # log.debug("Result Shape:{}".format(result.shape))
+        # log.debug("Results: {}".format(result))
         argmax = np.argmax(result)
         # print("Argmax:{}".format(argmax))
         return argmax
@@ -139,11 +139,11 @@ def neural_base(depth, hidden_units, fn, X, output_size):
 
 def build_neural_classifier(rounds=20):
     classifier_list = []
-    #for fn in [tf.nn.tanh, tf.nn.relu]:
+    # for fn in [tf.nn.tanh, tf.nn.relu]:
     for fn in [tf.nn.relu]:
-        #for hidden_units in [8, 16, 32]:
+        # for hidden_units in [8, 16, 32]:
         for hidden_units in [8]:
-            #for depth in [3, 5]:
+            # for depth in [3, 5]:
             for depth in [3]:
                 # for learning_rate in [0.05, 0.005, 0.0005]:
                 for learning_rate in [0.005]:
