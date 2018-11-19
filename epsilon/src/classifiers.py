@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
 import logging
-from p06_spam import *
-import util
+
 logger = logging.getLogger(__name__)
 
 
@@ -138,7 +137,7 @@ def neural_base(depth, hidden_units, fn, X, output_size):
     return tf.layers.dense(o, units=output_size, activation=None)
 
 
-def build_neural_classifier():
+def build_neural_classifier(rounds=20):
     classifier_list = []
     #for fn in [tf.nn.tanh, tf.nn.relu]:
     for fn in [tf.nn.relu]:
@@ -153,43 +152,5 @@ def build_neural_classifier():
                          "%s/%s/%s/%s" % (
                          depth, hidden_units, fn.__name__, str(learning_rate)),
                          learning_rate])
-    return [NNClassifier(f, name, 5000, learning_rate) for
+    return [NNClassifier(f, name, rounds, learning_rate) for
             f, name, learning_rate in classifier_list]
-
-
-def main():
-    train_messages, train_labels = util.load_spam_dataset('./temp_ps2_project/data/ds6_train.tsv')
-    #val_messages, val_labels = util.load_spam_dataset('../data/ds6_val.tsv')
-    #test_messages, test_labels = util.load_spam_dataset('../data/ds6_test.tsv')
-    train_labels_reshape = np.reshape(train_labels, (-1, 1))
-    print("{}, {}".format(train_labels_reshape.shape, train_labels.shape))
-    print("{}, {}".format(train_labels_reshape[0], train_labels[0]))
-    dictionary = create_dictionary(train_messages)
-
-    #util.write_json('./output/p06_dictionary', dictionary)
-
-    train_matrix = transform_text(train_messages, dictionary)
-
-    neural_net_classifiers = build_neural_classifier()
-
-    for classifier in neural_net_classifiers:
-        print(" ======== ", classifier.__class__.__name__)
-        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 10)
-        # plt.clf()
-        # plt.title("Loss, showing all updates".format(n_updates))
-        # plt.plot(total_losses)
-        print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
-                                                              str(r[
-                                                                      "mean_train_score"]),
-                                                              str(r[
-                                                                      "mean_test_score"]),
-                                                              str(r[
-                                                                      "mean_test_score"] -
-                                                                  r[
-                                                                      "mean_train_score"])]))
-
-
-
-if __name__ == "__main__":
-    main()
-

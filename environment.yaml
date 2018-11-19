@@ -3,6 +3,7 @@ channels:
   - defaults
 dependencies:
   - scipy
+  - tensorflow
   - scikit-learn
   - matplotlib=2.2.2
   - numpy=1.15.0
