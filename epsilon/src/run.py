@@ -6,8 +6,11 @@ import os, sys
 
 from ml.feature import Feature
 from ml.logistic import LogisticClassifier
-from classifiers import build_neural_classifier
+from classifiers import build_neural_classifier, NBClassifier
 from processor import get_text_body, create_dictionary, transform_text
+import os
+
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 logger = logging.getLogger(__name__)
@@ -118,23 +121,22 @@ def main(data, spam):
     n_values = np.max(train_labels) + 1
     train_labels_reshape = np.eye(n_values)[train_labels]
 
-    neural_net_classifiers = build_neural_classifier(2000)
+    neural_net_classifiers = [NBClassifier()] + build_neural_classifier(2000)
 
     for classifier in neural_net_classifiers:
         print(" ======== ", classifier.__class__.__name__)
-        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 10)
+        if type(classifier) == NBClassifier:
+            r = classifier.get_cv_score(train_matrix, train_labels, 5)
+        else:
+            r = classifier.get_cv_score(train_matrix, train_labels_reshape, 5)
         # plt.clf()
         # plt.title("Loss, showing all updates".format(n_updates))
         # plt.plot(total_losses)
         print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
-                                                              str(r[
-                                                                      "mean_train_score"]),
-                                                              str(r[
-                                                                      "mean_test_score"]),
-                                                              str(r[
-                                                                      "mean_test_score"] -
-                                                                  r[
-                                                                      "mean_train_score"])]))
+                                                              str(r["mean_train_score"]),
+                                                              str(r["mean_test_score"]),
+                                                              str(r["mean_test_score"] -
+                                                                  r["mean_train_score"])]))
 
 
 if __name__ == "__main__":

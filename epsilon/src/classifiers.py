@@ -141,9 +141,15 @@ def build_neural_classifier(rounds=20):
     classifier_list = []
     # for fn in [tf.nn.tanh, tf.nn.relu]:
     for fn in [tf.nn.relu]:
+<<<<<<< Updated upstream
         # for hidden_units in [8, 16, 32]:
         for hidden_units in [8]:
             # for depth in [3, 5]:
+=======
+        #for hidden_units in [8, 16, 32]:
+        for hidden_units in [8, 16]:
+            #for depth in [3, 5]:
+>>>>>>> Stashed changes
             for depth in [3]:
                 # for learning_rate in [0.05, 0.005, 0.0005]:
                 for learning_rate in [0.005]:
