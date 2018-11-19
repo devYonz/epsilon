@@ -7,11 +7,11 @@ def get_text_body(issue: dict)-> str:
     :param dict issue: JIRA object with many keys
     :return str: one line string representation concatenating text form the issues
     """
-    text_body = issue['text_body']
+    text_body = issue.get('summary')
     if issue.get('description'):
         text_body += ' ' + issue['description']
     for comment in issue.get('comments'):
-        text_body += ' ' + comment['body']
+        text_body += ' ' + comment.get('body')
     text_body = text_body.replace('\n', ' ')
     text_body = text_body.replace('\r', ' ')
     text_body = text_body.replace('&nbsp', ' ')

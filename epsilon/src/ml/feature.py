@@ -79,7 +79,7 @@ class Feature(object):
         :param str name: the name of the class
         :return:
         """
-        return self.target_class.get(name)
+        return self.target_ids.get(name)
 
     def get_target_names(self, ids : list)-> list:
         """ Transform the array of labels into string representation

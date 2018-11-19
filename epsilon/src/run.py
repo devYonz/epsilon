@@ -13,27 +13,26 @@ from sklearn.feature_selection import chi2
 
 
 PROJECT_KEY = 'projects'
-ISSUES_KEY = 'projects'
+ISSUES_KEY = 'issues'
 ASSIGNEE_KEY = 'assignee'
 
 
 @click.command()
 @click.option('--data', default='./datasets/Jumble-for-JIRA.json', help='The path to the dataset.')
 @click.option('--spam', default=None, help='The path to the dataset.')
-
-def main(data, type):
+def main(data, spam):
     print(f'Data set file recieved: {data}')
     with open(data) as f:
-        dataset = json.load(data)
+        dataset = json.load(f)
 
     issue_features = Feature()
     # TODO: capture the assignee class
 
     # Build the train matrix
     issues = []
-    if dataset.key(PROJECT_KEY):
+    if PROJECT_KEY in dataset:
         for project in dataset.get(PROJECT_KEY):
-            issues.append(project.get(ISSUES_KEY))
+            issues.extend(project.get(ISSUES_KEY))
     else:
         issues = dataset
 
@@ -60,7 +59,7 @@ def main(data, type):
 
     # classify and get output
     logistic = LogisticClassifier()
-    logistic.fit(issue_features.data)
+    logistic.fit(issue_features.data, issue_features.target)
     # test on a training set value
     x, y = issue_features.get_random_pairs(10)
     y_predict = logistic.predict(x)

@@ -20,9 +20,7 @@ class LogisticClassifier(Classifier):
         :return:
         """
         # Design x shape has samples on rows
-        x = 1
-        (m, n) = x.shape
-        y = 1
+        (m, n) = np.shape(x)
         # Support for theta 0 + theta1* x1  : [1 | x^i]
         # Randomly initialize the starting theta
         theta = np.zeros(n)
@@ -33,6 +31,7 @@ class LogisticClassifier(Classifier):
             iteration += 1
             theta_old = theta
             z = np.dot(x, theta)
+            # TODO Below should probably be removed
             h_x = self.sigmoid(z)
             # Log likely hood equation to be maximized
             # l_theta = (y * np.log(h_x) + (1 - y) * np.log(1 - h_x)).sum()
@@ -40,7 +39,8 @@ class LogisticClassifier(Classifier):
             theta = theta_old + alpha * gradient # Maximize log likely hood
             diff = np.linalg.norm(theta_old-theta)
             # *** END CODE HERE ***
-        return theta
+        self.theta = theta
+        return self.theta
 
     def predict(self, x):
         """Make a prediction given new inputs x.
@@ -51,8 +51,7 @@ class LogisticClassifier(Classifier):
         Returns:
             Outputs of shape (m,).
         """
-        prediction = self.sigmoid((x @ self.theta))
-        return prediction
+        return self.sigmoid((x @ self.theta))
 
     def sigmoid(self, t):
         return 1 / (1 + np.exp(-t))
