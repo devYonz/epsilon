@@ -32,7 +32,7 @@ ASSIGNEE_KEY = 'assignee'
 @click.option('--data', default='./datasets/Jumble-for-JIRA.json', help='The path to the dataset.')
 @click.option('--spam', default=None, help='The path to the dataset.')
 def main_yf(data, spam):
-    print(f'Data set file recieved: {data}')
+    log.debug(f'Data set file recieved: {data}')
     with open(data) as f:
         dataset = json.load(f)
 
@@ -105,6 +105,8 @@ def main(data, spam):
         assignees.append(issue.get(ASSIGNEE_KEY))
     # Construct the words into vector of >5 occurance
     dictionary = create_dictionary(issues_lines)
+    # TODO: Tokenization and Lemmmatization goes here
+
     train_matrix = transform_text(issues_lines, dictionary)
 
     # Y label assignees -> int class number
@@ -121,14 +123,15 @@ def main(data, spam):
     n_values = np.max(train_labels) + 1
     train_labels_reshape = np.eye(n_values)[train_labels]
 
-    neural_net_classifiers = [NBClassifier()] + build_neural_classifier(2000)
+    #neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
+    neural_net_classifiers = build_neural_classifier(10000)
 
     for classifier in neural_net_classifiers:
         print(" ======== ", classifier.__class__.__name__)
         if type(classifier) == NBClassifier:
             r = classifier.get_cv_score(train_matrix, train_labels, 5)
         else:
-            r = classifier.get_cv_score(train_matrix, train_labels_reshape, 5)
+            r = classifier.get_cv_score(train_matrix, train_labels_reshape, 2)
         # plt.clf()
         # plt.title("Loss, showing all updates".format(n_updates))
         # plt.plot(total_losses)
@@ -137,7 +140,6 @@ def main(data, spam):
                                                               str(r["mean_test_score"]),
                                                               str(r["mean_test_score"] -
                                                                   r["mean_train_score"])]))
-
 
 if __name__ == "__main__":
     main()

@@ -75,7 +75,8 @@ def create_dictionary(messages: list) -> dict:
     # *** END CODE HERE ***
 
 
-def transform_text(messages, word_dictionary):
+def transform_text(messages, word_dictionary, remove_stopwords = False,
+                   stemming = False):
     """Transform a list of text messages into a numpy array for further processing.
 
     This function should create a numpy array that contains the number of times each word
@@ -95,6 +96,8 @@ def transform_text(messages, word_dictionary):
         Sample 1: [ 10 2233 2334 44]  int(word1) int(word2)
         Sample 2: [
     """
+    # TODO: Implement stemming, stopword removal and lemmatize possibly?
+    # TODO: Help lies here: https://textminingonline.com/dive-into-nltk-part-iv-stemming-and-lemmatization
     # *** START CODE HERE ***
     n = len(word_dictionary)
     m = len(messages)
