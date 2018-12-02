@@ -1,4 +1,5 @@
 .idea
+.DS_Store
 *.egg
 *.egg-info/
 *.iml
