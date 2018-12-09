@@ -29,4 +29,5 @@
 /config/
 /dist/
 /ligradle/
+lnkd/
 TEST-*.xml

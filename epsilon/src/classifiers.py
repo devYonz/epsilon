@@ -5,6 +5,7 @@ from functools import partial
 import numpy as np
 
 import matplotlib as mpl
+
 mpl.use('TkAgg')
 
 import matplotlib.pyplot as plt
@@ -32,14 +33,14 @@ class CVClassifier(BaseEstimator):
         raise NotImplementedError("You need to override predict()")
 
     def score(self, X, y=None):
-
-        '''
+        """
         predictions = self.predict(X)
         mean_squared_error = np.mean((np.array(y) - np.array(predictions)) ** 2)
         return mean_squared_error
-        '''
-        # TODO: Works for neural net - but not NaiveBayes because of predicted output shape. The following reshape fixes it for naive bayes, but doesnt hold for the neural nets.
-        #y = np.reshape(y, (-1, 1))
+        """
+        # TODO: Works for neural net - but not NaiveBayes because of predicted output shape.
+        # The following reshape fixes it for naive bayes, but doesnt hold for the neural nets.
+        # y = np.reshape(y, (-1, 1))
         predicted = self.predict(X)
         target_argmax = np.argmax(y, axis=1)
         accuracy = np.sum(predicted == target_argmax) / len(target_argmax)
@@ -129,13 +130,16 @@ class NNClassifier(CVClassifier):
             r = self.session.run([train, loss, self.out],
                                  feed_dict={self.in_ph: X, out_ph: y})
             self.loss.append(r[1])
-            if not(i % 1000) or i == self.training_rounds-1:
+            if not (i % 1000) or i == self.training_rounds - 1:
                 log.info("#  Training loss at round %s: %s" % (i, r[1]))
-
+        plt.plot(self.loss)
+        plt.title(f'Loss plot: {self.name} as depth/height/activator/alpha')
+        plt.xlabel('NN iteration')
+        plt.ylabel('Logistic cross-entorpy loss')
+        plt.savefig(f'captures/{self.name}.png')
+        # plt.show()
+        plt.close()
         log.info(f"Accuracy: {self.score(X, y)}")
-        #plt.plot(self.loss)
-        #plt.show()
-
         return self
 
     def predict(self, X):
@@ -157,21 +161,18 @@ def neural_base(depth, hidden_units, fn, X, output_size):
     return tf.layers.dense(o, units=output_size, activation=None)
 
 
-def build_neural_classifier(rounds=20, dropout = False):
-    # TODO: Introduce dropout layers.
+def build_neural_classifier(rounds=20, prefix='E'):
     classifier_list = []
-    # for fn in [tf.nn.tanh, tf.nn.relu]:
     for fn in [tf.nn.tanh, tf.nn.relu]:
-        # for hidden_units in [8, 16, 32]:
-        for hidden_units in [8, 16]:
-            # for depth in [3, 5]:
+        # for fn in [tf.nn.relu]:
+        for hidden_units in [8, 16, 32]:
+            # for hidden_units in [8]:
             for depth in [3, 5]:
-                # for learning_rate in [0.05, 0.005, 0.0005]:
-                for learning_rate in [0.005]:
+                # for depth in [3]:
+                for learning_rate in [0.5, 0.05, 0.005]:
+                    # for learning_rate in [0.005]:
                     classifier_list.append(
                         [partial(neural_base, depth, hidden_units, fn),
-                         "%s/%s/%s/%s" % (
-                         depth, hidden_units, fn.__name__, str(learning_rate)),
+                         "%s%s-%s.%s.%s" % (prefix, depth, hidden_units, fn.__name__, str(learning_rate)),
                          learning_rate])
-    return [NNClassifier(f, name, rounds, learning_rate) for
-            f, name, learning_rate in classifier_list]
+    return [NNClassifier(f, name, rounds, learning_rate) for f, name, learning_rate in classifier_list]

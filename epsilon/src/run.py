@@ -80,8 +80,8 @@ def main_yf(data, spam):
 
 @click.command()
 @click.option('--data', default='./datasets/Jumble-for-JIRA.json', help='The path to the dataset.')
-@click.option('--spam', default=None, help='The path to the dataset.')
-def main(data, spam):
+@click.option('--lnkd', default='E', help='The dataset figure name')
+def main(data, lnkd):
     print(f'Data set file recieved: {data}')
     with open(data) as f:
         dataset = json.load(f)
@@ -105,7 +105,7 @@ def main(data, spam):
         assignees.append(issue.get(ASSIGNEE_KEY))
     # Construct the words into vector of >5 occurance
     dictionary = create_dictionary(issues_lines)
-    # TODO: Tokenization and Lemmmatization goes here
+    # TODO(yfeleke): Tokenization and Lemmmatization goes here
 
     train_matrix = transform_text(issues_lines, dictionary)
 
@@ -124,7 +124,7 @@ def main(data, spam):
     train_labels_reshape = np.eye(n_values)[train_labels]
 
     #neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
-    neural_net_classifiers = build_neural_classifier(10000)
+    neural_net_classifiers = build_neural_classifier(2000, lnkd)
 
     for classifier in neural_net_classifiers:
         print(" ======== ", classifier.__class__.__name__)
@@ -140,6 +140,7 @@ def main(data, spam):
                                                               str(r["mean_test_score"]),
                                                               str(r["mean_test_score"] -
                                                                   r["mean_train_score"])]))
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,372 @@
+(epsilon)$ python src/run.py
+Data set file recieved: ./datasets/Jumble-for-JIRA.json
+ ========  NNClassifier
+2018-12-09 16:03:42.657233: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+ AVX
+2018-12-09 16:03:42.666375: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_thread
+s for best performance.
+2018-12-09 16:03:42,966 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6302485
+2018-12-09 16:04:13,332 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3123994
+2018-12-09 16:04:43,567 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3121963
+2018-12-09 16:04:43,737 - MainThread - font_manager - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu S
+ans ('/home/yaberraf/miniconda3/envs/epsilon/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-12-09 16:04:43,790 - MainThread - font_manager - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu S
+ans ('/home/yaberraf/miniconda3/envs/epsilon/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-12-09 16:04:43,884 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:04:44,530 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.674922
+2018-12-09 16:05:11,501 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.735494
+2018-12-09 16:05:38,073 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.722895
+2018-12-09 16:05:38,396 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.tanh.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:05:38,947 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.625339
+2018-12-09 16:06:05,618 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.1680684
+2018-12-09 16:06:32,222 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.1822262
+2018-12-09 16:06:32,419 - MainThread - classifiers - INFO - Accuracy: 0.13176297386823702
+2018-12-09 16:06:32,977 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6101804
+2018-12-09 16:06:59,661 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214718
+2018-12-09 16:07:26,228 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214413
+2018-12-09 16:07:26,417 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.tanh.0.05>                   0.3215842095242583        0.30263503198323694       -0.018949177541021378
+ ========  NNClassifier
+2018-12-09 16:07:26,968 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.626862
+2018-12-09 16:07:53,552 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.8757668
+2018-12-09 16:08:20,159 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.68396163
+2018-12-09 16:08:20,354 - MainThread - classifiers - INFO - Accuracy: 0.791313949208686
+2018-12-09 16:08:21,002 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6349063
+2018-12-09 16:08:47,585 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.2770641
+2018-12-09 16:09:14,431 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.8673161
+2018-12-09 16:09:14,622 - MainThread - classifiers - INFO - Accuracy: 0.7490802060338484
+Score / NNSARSClassifier<E3-8.tanh.0.005>                  0.7701970776212672        0.08775843265212382       -0.6824386449691434
+ ========  NNClassifier
+2018-12-09 16:09:15,345 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.612321
+2018-12-09 16:09:42,480 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3158002
+2018-12-09 16:10:09,593 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3221433
+2018-12-09 16:10:09,797 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:10:10,513 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6557603
+2018-12-09 16:10:37,637 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7232985
+2018-12-09 16:11:04,771 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214723
+2018-12-09 16:11:04,964 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.tanh.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:11:05,680 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6162777
+2018-12-09 16:11:32,831 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.312231
+2018-12-09 16:12:00,045 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122833
+2018-12-09 16:12:00,243 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:12:01,074 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6492395
+2018-12-09 16:12:28,279 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214723
+2018-12-09 16:12:55,675 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214649
+2018-12-09 16:12:55,889 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.tanh.0.05>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:12:56,643 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.618919
+2018-12-09 16:13:24,612 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.0887616
+2018-12-09 16:13:52,899 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.78490466
+2018-12-09 16:13:53,138 - MainThread - classifiers - INFO - Accuracy: 0.7960986382039014
+2018-12-09 16:13:53,907 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6253695
+2018-12-09 16:14:21,819 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.722167
+2018-12-09 16:14:49,512 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.5368024
+2018-12-09 16:14:49,718 - MainThread - classifiers - INFO - Accuracy: 0.5754231052244297
+Score / NNSARSClassifier<E5-8.tanh.0.005>                  0.6857608717141656        0.05722404894590326       -0.6285368227682623
+ ========  NNClassifier
+2018-12-09 16:14:50,270 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.604903
+2018-12-09 16:15:07,503 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3232973
+2018-12-09 16:15:24,789 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3337612
+2018-12-09 16:15:25,072 - MainThread - classifiers - INFO - Accuracy: 0.07949944792050055
+2018-12-09 16:15:25,618 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5890408
+2018-12-09 16:15:42,943 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.72143
+2018-12-09 16:16:00,535 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214296
+2018-12-09 16:16:00,720 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.tanh.0.5>                   0.2954524465503901        0.06201693043798307       -0.23343551611240704
+ ========  NNClassifier
+2018-12-09 16:16:01,259 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.620076
+2018-12-09 16:16:18,648 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.1342382
+2018-12-09 16:16:36,697 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.3307087
+2018-12-09 16:16:36,880 - MainThread - classifiers - INFO - Accuracy: 0.3548030916451969
+2018-12-09 16:16:37,413 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.718495
+2018-12-09 16:16:56,414 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.72185
+2018-12-09 16:17:13,890 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.72157
+2018-12-09 16:17:14,074 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.tanh.0.05>                  0.4331042684127383        0.14829360446300147       -0.28481066394973686
+ ========  NNClassifier
+2018-12-09 16:17:14,707 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5957403
+2018-12-09 16:17:32,016 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.015665239
+2018-12-09 16:17:49,278 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.33313033
+2018-12-09 16:17:49,459 - MainThread - classifiers - INFO - Accuracy: 0.9315421420684579
+2018-12-09 16:17:50,003 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.59607
+2018-12-09 16:18:07,358 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.35519686
+2018-12-09 16:18:24,659 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.08954984
+2018-12-09 16:18:24,839 - MainThread - classifiers - INFO - Accuracy: 0.9838116261957321
+Score / NNSARSClassifier<E3-16.tanh.0.005>                 0.9576768841320951        0.06715592799594194       -0.8905209561361531
+ ========  NNClassifier
+2018-12-09 16:18:25,554 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6109524
+2018-12-09 16:18:43,804 - MainThread - classifiers - INFO - #  Training loss at round 1000: 35.370113
+2018-12-09 16:19:01,920 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3121872
+2018-12-09 16:19:02,119 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:19:02,844 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.593543
+2018-12-09 16:19:20,870 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214274
+2018-12-09 16:19:38,948 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214432
+2018-12-09 16:19:39,144 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.tanh.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:19:39,965 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.611176
+2018-12-09 16:19:58,030 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3121963
+2018-12-09 16:20:16,156 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3121893
+2018-12-09 16:20:16,379 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:20:17,107 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5836163
+2018-12-09 16:20:35,231 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214916
+2018-12-09 16:20:53,336 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7216048
+2018-12-09 16:20:53,556 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.tanh.0.05>                  0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:20:54,274 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6254506
+2018-12-09 16:21:12,427 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.18236539
+2018-12-09 16:21:30,822 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.0603694
+2018-12-09 16:21:31,047 - MainThread - classifiers - INFO - Accuracy: 0.7180714022819286
+2018-12-09 16:21:31,884 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6556826
+2018-12-09 16:21:50,087 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.69502556
+2018-12-09 16:22:08,085 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.7144693
+2018-12-09 16:22:08,305 - MainThread - classifiers - INFO - Accuracy: 0.8454746136865342
+Score / NNSARSClassifier<E5-16.tanh.0.005>                 0.7817730079842313        0.08260751873508931       -0.699165489249142
+ ========  NNClassifier
+2018-12-09 16:22:08,866 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.62608
+2018-12-09 16:22:29,065 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3281517
+2018-12-09 16:22:49,248 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.356439
+2018-12-09 16:22:49,450 - MainThread - classifiers - INFO - Accuracy: 0.07949944792050055
+2018-12-09 16:22:50,010 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6356773
+2018-12-09 16:23:10,181 - MainThread - classifiers - INFO - #  Training loss at round 1000: 11.26056
+2018-12-09 16:23:30,327 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7547505
+2018-12-09 16:23:30,533 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.tanh.0.5>                   0.2954524465503901        0.06201693043798307       -0.23343551611240704
+ ========  NNClassifier
+2018-12-09 16:23:31,103 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6084723
+2018-12-09 16:23:51,600 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.6789652
+2018-12-09 16:24:12,152 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.7810506
+2018-12-09 16:24:12,363 - MainThread - classifiers - INFO - Accuracy: 0.49613544350386457
+2018-12-09 16:24:13,056 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.603025
+2018-12-09 16:24:33,211 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.3760502
+2018-12-09 16:24:53,477 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214272
+2018-12-09 16:24:53,683 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.tanh.0.05>                  0.5037704443420721        0.13136939548581236       -0.3724010488562597
+ ========  NNClassifier
+2018-12-09 16:24:54,232 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5856943
+2018-12-09 16:25:14,574 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.00094895967
+2018-12-09 16:25:34,814 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.0002561365
+2018-12-09 16:25:35,019 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:25:35,579 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.703465
+2018-12-09 16:25:56,195 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.009948294
+2018-12-09 16:26:16,370 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.0013786831
+2018-12-09 16:26:16,576 - MainThread - classifiers - INFO - Accuracy: 1.0
+Score / NNSARSClassifier<E3-32.tanh.0.005>                 1.0                       0.05832631216040069       -0.9416736878395993
+ ========  NNClassifier
+2018-12-09 16:26:17,313 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.671178
+2018-12-09 16:26:39,403 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3375216
+2018-12-09 16:27:02,231 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.374796
+2018-12-09 16:27:02,443 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:27:03,292 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6851254
+2018-12-09 16:27:25,551 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.770334
+2018-12-09 16:27:47,909 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.8086038
+2018-12-09 16:27:48,138 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.tanh.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:27:48,883 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6467447
+2018-12-09 16:28:10,902 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.312204
+2018-12-09 16:28:32,812 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3126988
+2018-12-09 16:28:33,035 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:28:33,792 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5542746
+2018-12-09 16:28:55,654 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214544
+2018-12-09 16:29:17,729 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214665
+2018-12-09 16:29:17,957 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.tanh.0.05>                  0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:29:18,793 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6166244
+2018-12-09 16:29:40,714 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.0009168472
+2018-12-09 16:30:02,674 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.00026258372
+2018-12-09 16:30:02,893 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:30:03,647 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.654187
+2018-12-09 16:30:25,887 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.44012436
+2018-12-09 16:30:47,625 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.15076637
+2018-12-09 16:30:47,845 - MainThread - classifiers - INFO - Accuracy: 0.9672553348050037
+Score / NNSARSClassifier<E5-32.tanh.0.005>                 0.9836276674025018        0.06384399265193967       -0.9197836747505622
+ ========  NNClassifier
+2018-12-09 16:30:48,405 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.697237
+2018-12-09 16:31:19,559 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.312235
+2018-12-09 16:31:51,077 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122232
+2018-12-09 16:31:51,290 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:31:51,878 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6177106
+2018-12-09 16:32:22,981 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214723
+2018-12-09 16:32:54,281 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214572
+2018-12-09 16:32:54,494 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.relu.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:32:55,171 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6170626
+2018-12-09 16:33:25,008 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.2596908
+2018-12-09 16:33:55,165 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.5632222
+2018-12-09 16:33:55,386 - MainThread - classifiers - INFO - Accuracy: 0.2800883327199117
+2018-12-09 16:33:55,972 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.608467
+2018-12-09 16:34:26,549 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.7199084
+2018-12-09 16:34:56,927 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.7381141
+2018-12-09 16:34:57,144 - MainThread - classifiers - INFO - Accuracy: 0.6022810890360559
+Score / NNSARSClassifier<E3-8.relu.0.05>                   0.44118471087798383       0.08151019810134484       -0.359674512776639
+ ========  NNClassifier
+2018-12-09 16:34:57,715 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6123724
+2018-12-09 16:35:27,705 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.009182374
+2018-12-09 16:35:58,245 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.0016814059
+2018-12-09 16:35:58,450 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:35:59,093 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6660323
+2018-12-09 16:36:29,982 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.1379116
+2018-12-09 16:37:00,474 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.9448573
+2018-12-09 16:37:00,698 - MainThread - classifiers - INFO - Accuracy: 0.6622516556291391
+Score / NNSARSClassifier<E3-8.relu.0.005>                  0.8311258278145696        0.057406789020591736      -0.7737190387939779
+ ========  NNClassifier
+2018-12-09 16:37:01,538 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6118174
+2018-12-09 16:37:33,895 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3122444
+2018-12-09 16:38:06,036 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122053
+2018-12-09 16:38:06,243 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:38:07,000 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.616599
+2018-12-09 16:38:39,505 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214737
+2018-12-09 16:39:10,895 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214608
+2018-12-09 16:39:11,130 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.relu.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:39:11,896 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.611101
+2018-12-09 16:39:43,232 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.9477992
+2018-12-09 16:40:14,691 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.1395702
+2018-12-09 16:40:14,916 - MainThread - classifiers - INFO - Accuracy: 0.645933014354067
+2018-12-09 16:40:15,848 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6194334
+2018-12-09 16:40:47,364 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.7866387
+2018-12-09 16:41:18,500 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.5894961
+2018-12-09 16:41:18,737 - MainThread - classifiers - INFO - Accuracy: 0.5835172921265637
+Score / NNSARSClassifier<E5-8.relu.0.05>                   0.6147251532403153        0.07322947955572565       -0.5414956736845896
+ ========  NNClassifier
+2018-12-09 16:41:19,489 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.61649
+2018-12-09 16:41:50,468 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.06872902
+2018-12-09 16:42:21,264 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.013320303
+2018-12-09 16:42:21,493 - MainThread - classifiers - INFO - Accuracy: 0.9985277880014722
+2018-12-09 16:42:22,243 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6207013
+2018-12-09 16:42:53,566 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.1236045
+2018-12-09 16:43:25,292 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.0202479
+2018-12-09 16:43:25,506 - MainThread - classifiers - INFO - Accuracy: 0.7328918322295805
+Score / NNSARSClassifier<E5-8.relu.0.005>                  0.8657098101155264        0.0579592747595536        -0.8077505353559727
+ ========  NNClassifier
+2018-12-09 16:43:26,072 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6164994
+2018-12-09 16:43:54,478 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.312235
+2018-12-09 16:44:23,449 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122077
+2018-12-09 16:44:23,647 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:44:24,316 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6395197
+2018-12-09 16:44:51,630 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214746
+2018-12-09 16:45:18,551 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.721457
+2018-12-09 16:45:18,746 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:45:19,329 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.579467
+2018-12-09 16:45:45,917 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.9785903
+2018-12-09 16:46:12,690 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.353127
+2018-12-09 16:46:12,910 - MainThread - classifiers - INFO - Accuracy: 0.35664335664335667
+2018-12-09 16:46:13,503 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.652145
+2018-12-09 16:46:40,320 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.5943546
+2018-12-09 16:47:07,175 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.5273938
+2018-12-09 16:47:07,385 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.relu.0.05>                  0.43402440091181815       0.08832303786991832       -0.3457013630418998
+ ========  NNClassifier
+2018-12-09 16:47:07,967 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.618034
+2018-12-09 16:47:34,464 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.0002553168
+2018-12-09 16:48:01,500 - MainThread - classifiers - INFO - #  Training loss at round 1999: 5.614388e-05
+2018-12-09 16:48:01,705 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:48:02,382 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.5939565
+2018-12-09 16:48:29,562 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.00041631603
+2018-12-09 16:48:56,922 - MainThread - classifiers - INFO - #  Training loss at round 1999: 8.649833e-05
+2018-12-09 16:48:57,136 - MainThread - classifiers - INFO - Accuracy: 1.0
+Score / NNSARSClassifier<E3-16.relu.0.005>                 1.0                       0.0610852878193415        -0.9389147121806585
+ ========  NNClassifier
+2018-12-09 16:48:57,881 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.607827
+2018-12-09 16:49:25,791 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3122485
+2018-12-09 16:49:53,366 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122056
+2018-12-09 16:49:53,662 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:49:54,407 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.610409
+2018-12-09 16:50:24,872 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214737
+2018-12-09 16:50:53,830 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214587
+2018-12-09 16:50:54,042 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:50:54,885 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6137714
+2018-12-09 16:51:23,695 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.6686392
+2018-12-09 16:51:51,747 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.9675813
+2018-12-09 16:51:51,983 - MainThread - classifiers - INFO - Accuracy: 0.2020610967979389
+2018-12-09 16:51:52,724 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.603295
+2018-12-09 16:52:20,141 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7209435
+2018-12-09 16:52:48,218 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.720936
+2018-12-09 16:52:48,443 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.relu.0.05>                  0.3567332709891093        0.1757034646543186        -0.18102980633479068
+ ========  NNClassifier
+2018-12-09 16:52:49,206 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.613644
+2018-12-09 16:53:18,107 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.00021886545
+2018-12-09 16:53:46,160 - MainThread - classifiers - INFO - #  Training loss at round 1999: 4.4054177e-05
+2018-12-09 16:53:46,391 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:53:47,148 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.7243524
+2018-12-09 16:54:15,020 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.5242531
+2018-12-09 16:54:42,487 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.596892
+2018-12-09 16:54:42,725 - MainThread - classifiers - INFO - Accuracy: 0.6210448859455482
+Score / NNSARSClassifier<E5-16.relu.0.005>                 0.8105224429727741        0.041397905374900845      -0.7691245375978732
+ ========  NNClassifier
+2018-12-09 16:54:43,409 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.619511
+2018-12-09 16:55:13,589 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.312243
+2018-12-09 16:55:43,775 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122077
+2018-12-09 16:55:43,977 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 16:55:44,578 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.613154
+2018-12-09 16:56:15,076 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.721473
+2018-12-09 16:56:45,307 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.721457
+2018-12-09 16:56:45,505 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 16:56:46,078 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6194744
+2018-12-09 16:57:16,030 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.5997468
+2018-12-09 16:57:46,085 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.93771994
+2018-12-09 16:57:46,306 - MainThread - classifiers - INFO - Accuracy: 0.7246963562753036
+2018-12-09 16:57:46,884 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.4658504
+2018-12-09 16:58:16,862 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.711975
+2018-12-09 16:58:47,385 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7119613
+2018-12-09 16:58:47,597 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.relu.0.05>                  0.6180509007277917        0.10892642271171375       -0.509124478016078
+ ========  NNClassifier
+2018-12-09 16:58:48,264 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.611304
+2018-12-09 16:59:18,549 - MainThread - classifiers - INFO - #  Training loss at round 1000: 4.4308887e-05
+2018-12-09 16:59:48,693 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.0189962e-05
+2018-12-09 16:59:48,919 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 16:59:49,501 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6439695
+2018-12-09 17:00:19,657 - MainThread - classifiers - INFO - #  Training loss at round 1000: 7.673016e-05
+2018-12-09 17:00:49,923 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.765443e-05
+2018-12-09 17:00:50,142 - MainThread - classifiers - INFO - Accuracy: 1.0
+Score / NNSARSClassifier<E3-32.relu.0.005>                 1.0                       0.07525031801783283       -0.9247496819821672
+ ========  NNClassifier
+2018-12-09 17:00:50,927 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6047425
+2018-12-09 17:01:23,016 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3122492
+
+
+2018-12-09 17:01:54,864 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3122075
+2018-12-09 17:01:55,099 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
+2018-12-09 17:01:55,981 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6156974
+2018-12-09 17:02:28,084 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.7214725
+2018-12-09 17:03:00,082 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.7214584
+2018-12-09 17:03:00,316 - MainThread - classifiers - INFO - Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-09 17:03:01,082 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.61375
+2018-12-09 17:03:33,566 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.86327255
+2018-12-09 17:04:06,153 - MainThread - classifiers - INFO - #  Training loss at round 1999: 1.2560769
+2018-12-09 17:04:06,407 - MainThread - classifiers - INFO - Accuracy: 0.48582995951417
+2018-12-09 17:04:07,194 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.620362
+2018-12-09 17:04:39,608 - MainThread - classifiers - INFO - #  Training loss at round 1000: 1.9930058
+2018-12-09 17:05:11,038 - MainThread - classifiers - INFO - #  Training loss at round 1999: 2.080559
+2018-12-09 17:05:11,323 - MainThread - classifiers - INFO - Accuracy: 0.5268579838116262
+Score / NNSARSClassifier<E5-32.relu.0.05>                  0.5063439716628981        0.10193118140138008       -0.40441279026151805
+ ========  NNClassifier
+2018-12-09 17:05:12,121 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.615008
+2018-12-09 17:05:44,096 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.3156592e-05
+2018-12-09 17:06:15,350 - MainThread - classifiers - INFO - #  Training loss at round 1999: 4.8575303e-06
+2018-12-09 17:06:15,597 - MainThread - classifiers - INFO - Accuracy: 1.0
+2018-12-09 17:06:16,518 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.631965
+2018-12-09 17:06:48,329 - MainThread - classifiers - INFO - #  Training loss at round 1000: 0.0008437487
+2018-12-09 17:07:19,415 - MainThread - classifiers - INFO - #  Training loss at round 1999: 0.000113348004
+2018-12-09 17:07:19,651 - MainThread - classifiers - INFO - Accuracy: 1.0
+Score / NNSARSClassifier<E5-32.relu.0.005>                 1.0                       0.06439600444480194       -0.935603995555198
