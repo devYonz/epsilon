@@ -10,8 +10,13 @@ def get_text_body(issue: dict)-> str:
     text_body = issue.get('summary')
     if issue.get('description'):
         text_body += ' ' + issue['description']
+
+    # Capture comment bodies
     for comment in issue.get('comments'):
-        text_body += ' ' + comment.get('body')
+        if isinstance(comment, dict):
+            text_body += ' ' + comment.get('body')
+        else:
+            text_body += ' ' + comment
     text_body = text_body.replace('\n', ' ')
     text_body = text_body.replace('\r', ' ')
     text_body = text_body.replace('&nbsp', ' ')
@@ -38,7 +43,7 @@ def get_words(message):
     # *** END CODE HERE ***
 
 
-def create_dictionary(messages: list) -> dict:
+def create_dictionary(messages: list, vocabulary: dict = {}, counts: dict = {}) -> dict:
     """Create a dictionary mapping words to integer indices.
 
     This function should create a dictionary of word to indices using the provided
@@ -56,8 +61,6 @@ def create_dictionary(messages: list) -> dict:
     """
 
     # *** START CODE HERE ***
-    vocabulary = {}
-    counts = {}
     index = 0
     for message in messages:
         words = get_words(message)
@@ -75,8 +78,7 @@ def create_dictionary(messages: list) -> dict:
     # *** END CODE HERE ***
 
 
-def transform_text(messages, word_dictionary, remove_stopwords = False,
-                   stemming = False):
+def transform_text(messages, word_dictionary, stopwords):
     """Transform a list of text messages into a numpy array for further processing.
 
     This function should create a numpy array that contains the number of times each word
@@ -102,8 +104,12 @@ def transform_text(messages, word_dictionary, remove_stopwords = False,
     n = len(word_dictionary)
     m = len(messages)
     X = np.ndarray((m, n))
+
     for i, message in enumerate(messages):
         x_i = np.zeros(n)
+        for stopword in stopwords:
+            message.replace(stopword, '')
+
         words = get_words(message)
         for word in words:
             index = word_dictionary.get(word)

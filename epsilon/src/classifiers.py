@@ -1,25 +1,21 @@
 import tensorflow as tf
 from sklearn.base import BaseEstimator
 from sklearn import model_selection, tree
-from functools import partial
 import numpy as np
 
 import matplotlib as mpl
-
 mpl.use('TkAgg')
-
 import matplotlib.pyplot as plt
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
-import sys
 import logging
 
 log = logging.getLogger(__name__)
-handler = logging.StreamHandler(sys.stdout)
-formatter = logging.Formatter('%(asctime)s - %(threadName)s - %(module)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
+# handler = logging.StreamHandler(sys.stdout)
+# formatter = logging.Formatter('%(asctime)s - %(threadName)s - %(module)s - %(levelname)s - %(message)s')
+# handler.setFormatter(formatter)
 
-logging.basicConfig(level=logging.DEBUG, handlers=[handler])
+# logging.basicConfig(level=logging.DEBUG, handlers=[handler])
 
 
 class CVClassifier(BaseEstimator):
@@ -33,12 +29,6 @@ class CVClassifier(BaseEstimator):
         raise NotImplementedError("You need to override predict()")
 
     def score(self, X, y=None):
-        """
-        predictions = self.predict(X)
-        mean_squared_error = np.mean((np.array(y) - np.array(predictions)) ** 2)
-        return mean_squared_error
-        """
-        # TODO: Works for neural net - but not NaiveBayes because of predicted output shape.
         # The following reshape fixes it for naive bayes, but doesnt hold for the neural nets.
         # y = np.reshape(y, (-1, 1))
         predicted = self.predict(X)
@@ -117,8 +107,7 @@ class NNClassifier(CVClassifier):
         # loss = tf.reduce_mean(tf.square(self.out - out_ph))
         # print(out_ph)
         loss = tf.reduce_mean(
-            tf.nn.softmax_cross_entropy_with_logits_v2(labels=out_ph,
-                                                       logits=self.out))
+            tf.nn.softmax_cross_entropy_with_logits_v2(labels=out_ph, logits=self.out))
 
         optimizer = tf.train.AdamOptimizer(self.learning_rate)
         train = optimizer.minimize(loss)
@@ -151,28 +140,3 @@ class NNClassifier(CVClassifier):
         return "NNSARSClassifier<%s>" % (self.name)
 
 
-def neural_base(depth, hidden_units, fn, X, output_size):
-    o = X
-    for d_index in range(depth):
-        o = tf.layers.dense(o, units=hidden_units, activation=fn)
-    # No need for softmax layer if we use softmax_cross_entropy_with_logits_v2
-    # it internally performs the softmax.
-    # return tf.layers.dense(o, units=output_size, activation=tf.nn.softmax)
-    return tf.layers.dense(o, units=output_size, activation=None)
-
-
-def build_neural_classifier(rounds=20, prefix='E'):
-    classifier_list = []
-    for fn in [tf.nn.tanh, tf.nn.relu]:
-        # for fn in [tf.nn.relu]:
-        for hidden_units in [8, 16, 32]:
-            # for hidden_units in [8]:
-            for depth in [3, 5]:
-                # for depth in [3]:
-                for learning_rate in [0.5, 0.05, 0.005]:
-                    # for learning_rate in [0.005]:
-                    classifier_list.append(
-                        [partial(neural_base, depth, hidden_units, fn),
-                         "%s%s-%s.%s.%s" % (prefix, depth, hidden_units, fn.__name__, str(learning_rate)),
-                         learning_rate])
-    return [NNClassifier(f, name, rounds, learning_rate) for f, name, learning_rate in classifier_list]

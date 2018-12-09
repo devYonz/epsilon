@@ -36,7 +36,7 @@ class LogisticClassifier(Classifier):
             # Log likely hood equation to be maximized
             # l_theta = (y * np.log(h_x) + (1 - y) * np.log(1 - h_x)).sum()
             gradient = 1/m * x.T @ (y - h_x)
-            theta = theta_old + alpha * gradient # Maximize log likely hood
+            theta = theta_old + alpha * gradient  # Maximize log likely hood
             diff = np.linalg.norm(theta_old-theta)
             # *** END CODE HERE ***
         self.theta = theta

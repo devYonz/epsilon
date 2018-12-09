@@ -18,19 +18,6 @@ class Feature(object):
         #: target class - The class id of the corresponding name
         self.target_ids = {}
 
-    # def add_sample(self, x, y):
-    #     """
-    #
-    #     :param x:
-    #     :param y:
-    #     :return:
-    #     """
-    #     if self.get_target_id(y):
-    #         self.data.append(x)
-    #     else:
-    #         self.set_target_id(y)
-    #     self.target.append(self.get_target_id(y))
-
     def set_feature_names(self, names: list)-> None:
         """ Set the feature column names for the data
 
