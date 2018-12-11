@@ -119,7 +119,7 @@ class NNClassifier(CVClassifier):
             r = self.session.run([train, loss, self.out],
                                  feed_dict={self.in_ph: X, out_ph: y})
             self.loss.append(r[1])
-            if not (i % 1000) or i == self.training_rounds - 1:
+            if not (i % 200) or i == self.training_rounds - 1:
                 log.info("#  Training loss at round %s: %s" % (i, r[1]))
         plt.plot(self.loss)
         plt.title(f'Loss plot: {self.name} as depth/height/activator/alpha')

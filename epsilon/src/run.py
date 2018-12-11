@@ -7,7 +7,6 @@ import os
 import sys
 import tensorflow as tf
 
-
 from ml.feature import Feature
 from ml.logistic import LogisticClassifier
 from classifiers import NBClassifier, NNClassifier
@@ -20,16 +19,28 @@ handler.setFormatter(formatter)
 logging.basicConfig(level=logging.DEBUG, handlers=[handler])
 log = logging.getLogger(__name__)
 
-
 # log.setLevel(logging.DEBUG)
 PROJECT_KEY = 'projects'
 ISSUES_KEY = 'issues'
 ASSIGNEE_KEY = 'assignee'
-NOTES = 'notes.log'
-COUNTER = 'counts.log'
-TOTAL = 'total_count'
+NOTES_FILE = 'notes.log'
+COUNTER_FILE = 'counts.log'
+TOTAL_COUNT = 'total_count'
+ASSIGNEE_COUNT = 'assignee_count'
+DUPLICATE_COUNTS = 'duplicate_counts'
+DUPLICATE_PERCENT = 'duplicate_percent'
 ISSUES_DEDUP = {}
 ASSIGNEE_DEDUP = {}
+
+
+def get_stopwords():
+    stopwords = []
+    return []
+    stopwords_path = os.path.join('datasets', 'stop_words.txt')
+    if os.path.exists(stopwords_path):
+        with open(stopwords_path, 'r') as stopwords:
+            stopwords = stopwords.readlines()
+    return stopwords
 
 
 def neural_base(depth, hidden_units, fn, X, output_size):
@@ -60,7 +71,7 @@ def build_neural_classifier(rounds=20, prefix='E'):
 
 
 def take_note(text, directory):
-    with open(os.path.join(directory, NOTES), 'a') as f:
+    with open(os.path.join(directory, NOTES_FILE), 'a') as f:
         f.write(text)
     f.close()
 
@@ -73,31 +84,39 @@ def vectorize_json(tickets, directory):
     :param json_ticket:
     :return:
     """
+    counts = {}
     count = 0
-    # Capture stop words
-    if os.path.exists(os.path.join(directory, 'stop_words.txt')):
-        with open(os.path.join(directory, 'stop_words.txt'), 'r') as stopwords:
-            stopwords = stopwords.readlines()
+    assignee_count = 0
 
     issue_features = Feature()
+    train_labels = None
+    train_matrix = None
     issues_lines = []
     assignees = []
-    for issue in tickets:
+    stopwords = get_stopwords()
+    for i, issue in enumerate(tickets):
+        if i % 100 == 0:
+            log.debug(f'Processing ticket #{i}')
+
         if not ISSUES_DEDUP.get(issue.get('key')):
             count += 1
             ISSUES_DEDUP[issue.get('key')] = True
 
         words = get_text_body(issue)
+        # for stopword in stopwords:
+        #     words.replace(stopword, '')
         issues_lines.append(words)
-        assignees.append(issue.get(ASSIGNEE_KEY))
+        assignee = issue.get(ASSIGNEE_KEY)
+        assignees.append(assignee)
 
         # Construct the words into vector of >5 occurance
         dictionary = create_dictionary(issues_lines)
-        train_matrix = transform_text(issues_lines, dictionary, stopwords)
+        train_matrix = transform_text(issues_lines, dictionary)
 
-        # Y label assignees -> int class number
+        # Setup class Label ENUMS: Y label assignees -> int class number
         for class_name in list(set(assignees)):
             issue_features.set_target_id(class_name)
+            assignee_count += 1
         assignee_vector = []
         for assignee in assignees:
             assignee_vector.append(issue_features.get_target_id(assignee))
@@ -108,19 +127,25 @@ def vectorize_json(tickets, directory):
         train_labels = issue_features.target
 
     duplicates = len(tickets) - count
-    dup_percent = 100 * duplicates/ len(tickets)
-    log.debug(f'\t Ticket count:{count}  Duplicates:{len(json_ticket)} or {dup_percent}%')
+    dup_percent = 100 * duplicates / len(tickets)
+    log.debug(f'\t Ticket count:{count}  Duplicates:{duplicates)} or {dup_percent}%')
 
     # Output global counts and stats
-    count[ASSIGNEE_KEY] = len(set(assignees))
+    # Count total number of issues
+    count = {}
+    count[TOTAL_COUNT] = count
+    counts[ASSIGNEE_KEY] = assignee_count
+    counts[DUPLICATE_COUNTS] = duplicates
+    counts[DUPLICATE_PERCENT] = dup_percent
+
     # Store counts
-    with open(os.path.join(directory, COUNTER), 'w') as f_counter:
-        json.dump(count, f_counter)
+    with open(os.path.join(directory, COUNTER_FILE), 'w') as f_counter:
+        json.dump(counts, f_counter)
 
     return train_matrix, train_labels
 
 
-def production_neural_classifer(rounds=20, prefix='E'):
+def production_neural_classifer(rounds=200, prefix='E'):
     """ The function returns the DNN architecture chosen from searching across dimensions
     in the build_neural_classifier function
 
@@ -137,7 +162,6 @@ def production_neural_classifer(rounds=20, prefix='E'):
     return NNClassifier(tf_apply_fn, name, rounds, learning_rate)
 
 
-
 def run_classifier(classifier, train_matrix, train_labels):
     print(" ======== ", classifier.__class__.__name__)
     if type(classifier) == NBClassifier:
@@ -145,7 +169,7 @@ def run_classifier(classifier, train_matrix, train_labels):
     else:
         n_values = np.max(train_labels) + 1
         train_labels_reshape = np.eye(n_values)[train_labels]
-        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 2)
+        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 5)
     # plt.clf()
     # plt.title("Loss, showing all updates".format(n_updates))
     # plt.plot(total_losses)
@@ -154,6 +178,7 @@ def run_classifier(classifier, train_matrix, train_labels):
                                                           str(r["mean_test_score"]),
                                                           str(r["mean_test_score"] -
                                                               r["mean_train_score"])]))
+
 
 @click.group()
 def main():
@@ -212,7 +237,7 @@ def logistic(data, spam):
     # test on a training set value
     x, y = issue_features.get_random_pairs(10)
     y_predict = logistic.predict(x)
-    mse = 1/len(y) * np.linalg.norm(y_predict-y, ord=2)**2
+    mse = 1 / len(y) * np.linalg.norm(y_predict - y, ord=2) ** 2
     print(f'After training we recieved a MSE: {mse}')
 
 
@@ -226,6 +251,9 @@ def search(data, prefix):
 
     issue_features = Feature()
 
+    # Capture stop words
+    stopwords = get_stopwords()
+
     # Build the train matrix
     issues = []
     if PROJECT_KEY in dataset:
@@ -238,6 +266,8 @@ def search(data, prefix):
     assignees = []
     for issue in issues:
         words = get_text_body(issue)
+        for stopword in stopwords:
+            words.replace(stopword, '')
         issues_lines.append(words)
         assignees.append(issue.get(ASSIGNEE_KEY))
     # Construct the words into vector of >5 occurance
@@ -282,22 +312,17 @@ def search(data, prefix):
 @main.command(name='production')
 @click.option('--data', default='./datasets/Jumble-for-JIRA.json', help='The path to the dataset.')
 @click.option('--dir', 'directory', required=True, help='The path to the dataset.')
-@click.option('--prefix', default='E', help='The dataset figure name')
+@click.option('--prefix', default='P', help='The dataset figure name')
 @click.option('--rounds', default=500, help='The number of rounds to backprop')
 def production(data, directory, prefix, rounds):
     json_files = []
-    stopwords = []
     log.info(f'The directory value is: {directory}')
     if os.path.isdir(directory):
         json_files = [os.path.join(directory, f_json) for f_json in os.listdir(directory) if f_json.endswith('.json')]
         [log.debug(f'File found: {fname}') for fname in json_files]
 
-
-    # Count total number of issues
-    count = {}
-    count[TOTAL] = 0
     master_list = []
-    for batch in json_files:
+    for batch in json_files[0:1]:
         with open(batch) as f:
             log.debug(f'Working with file batch: {batch}')
             dataset = json.load(f)
@@ -306,22 +331,18 @@ def production(data, directory, prefix, rounds):
 
     train_matrix, train_labels = vectorize_json(master_list, directory)
     # neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
-    neural_net_classifiers = build_neural_classifier(2000, prefix)
-    run_classifier(neural_net_classifiers, train_matrix, train_labels)
 
     # SVM Linear Kernel Classifier
     svm_classifier = NBClassifier()
-    run_classifier(svm_classifier, train_matrix, train_labels)
-
+    # run_classifier(svm_classifier, train_matrix, train_labels)
 
     # Naieve Bayes Classifier
     # nb_classifier = NBClassifier()
     # run_classifier(svm_classifier, train_matrix, train_labels)
 
-
     # DNN Classifier
     dnn_classifier = production_neural_classifer(rounds, prefix)
-    # run_classifier(svm_classifier, train_matrix, train_labels)
+    run_classifier(dnn_classifier, train_matrix, train_labels)
 
 
 if __name__ == "__main__":
