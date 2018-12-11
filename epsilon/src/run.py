@@ -128,7 +128,7 @@ def vectorize_json(tickets, directory):
 
     duplicates = len(tickets) - count
     dup_percent = 100 * duplicates / len(tickets)
-    log.debug(f'\t Ticket count:{count}  Duplicates:{duplicates)} or {dup_percent}%')
+    log.debug(f'\t Ticket count:{count}  Duplicates:{duplicates} or {dup_percent}%')
 
     # Output global counts and stats
     # Count total number of issues
