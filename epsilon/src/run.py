@@ -292,7 +292,7 @@ def search(data, prefix):
     train_labels_reshape = np.eye(n_values)[train_labels]
 
     neural_net_classifiers = [SVMClassifier(), NBClassifier()]
-    # neural_net_classifiers.extend(build_neural_classifier(2000, prefix))
+    neural_net_classifiers.extend(build_neural_classifier(2000, prefix))
     # neural_net_classifiers = build_neural_classifier(2000, prefix)
 
     for classifier in neural_net_classifiers:
@@ -304,7 +304,7 @@ def search(data, prefix):
             accuracy_train = classifier.score(X_train, y_train)
             accuracy_test = classifier.score(X_test, y_test)
             print(f"Classifier train accuracy:{accuracy_train}  and testaccuacy: {accuracy_test} on 30% test samples")
-        elif type(classifier) == NBClassifier:
+        elif type(classifier) == NBClassifier or type(classifier) == SVMClassifier:
             r = classifier.get_cv_score(train_matrix, train_labels, 5)
             print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
                                                                   str(r["mean_train_score"]),
@@ -347,12 +347,12 @@ def production(data, directory, prefix, rounds):
     # neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
 
     # SVM Linear Kernel Classifier
-    svm_classifier = NBClassifier()
-    # run_classifier(svm_classifier, train_matrix, train_labels)
+    svm_classifier = SVMClassifier()
+    run_classifier(svm_classifier, train_matrix, train_labels)
 
     # Naieve Bayes Classifier
-    # nb_classifier = NBClassifier()
-    # run_classifier(svm_classifier, train_matrix, train_labels)
+    nb_classifier = NBClassifier()
+    run_classifier(nb_classifier, train_matrix, train_labels)
 
     # DNN Classifier
     dnn_classifier = production_neural_classifer(rounds, prefix)
