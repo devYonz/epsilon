@@ -9,8 +9,9 @@ import tensorflow as tf
 
 from ml.feature import Feature
 from ml.logistic import LogisticClassifier
-from classifiers import NBClassifier, NNClassifier
+from classifiers import NBClassifier, NNClassifier, SVMClassifier
 from processor import get_text_body, create_dictionary, transform_text
+from sklearn.model_selection import train_test_split
 
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 handler = logging.StreamHandler(sys.stdout)
@@ -290,23 +291,36 @@ def search(data, prefix):
     n_values = np.max(train_labels) + 1
     train_labels_reshape = np.eye(n_values)[train_labels]
 
-    # neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
-    neural_net_classifiers = build_neural_classifier(2000, prefix)
+    neural_net_classifiers = [SVMClassifier(), NBClassifier()]
+    # neural_net_classifiers.extend(build_neural_classifier(2000, prefix))
+    # neural_net_classifiers = build_neural_classifier(2000, prefix)
 
     for classifier in neural_net_classifiers:
         print(" ======== ", classifier.__class__.__name__)
-        if type(classifier) == NBClassifier:
+        if type(classifier) == SVMClassifier:
+            X_train, X_test, y_train, y_test = train_test_split(train_matrix, train_labels,
+                                                                test_size=0.30, random_state=42)
+            classifier.fit(X_train, y_train)
+            accuracy_train = classifier.score(X_train, y_train)
+            accuracy_test = classifier.score(X_test, y_test)
+            print(f"Classifier train accuracy:{accuracy_train}  and testaccuacy: {accuracy_test} on 30% test samples")
+        elif type(classifier) == NBClassifier:
             r = classifier.get_cv_score(train_matrix, train_labels, 5)
+            print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
+                                                                  str(r["mean_train_score"]),
+                                                                  str(r["mean_test_score"]),
+                                                                  str(r["mean_test_score"] -
+                                                                      r["mean_train_score"])]))
         else:
             r = classifier.get_cv_score(train_matrix, train_labels_reshape, 2)
-        # plt.clf()
-        # plt.title("Loss, showing all updates".format(n_updates))
-        # plt.plot(total_losses)
-        print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
-                                                              str(r["mean_train_score"]),
-                                                              str(r["mean_test_score"]),
-                                                              str(r["mean_test_score"] -
-                                                                  r["mean_train_score"])]))
+            # plt.clf()
+            # plt.title("Loss, showing all updates".format(n_updates))
+            # plt.plot(total_losses)
+            print("Score / {:<50} {:<25} {:<25} {:<25} ".format(*[str(classifier),
+                                                                  str(r["mean_train_score"]),
+                                                                  str(r["mean_test_score"]),
+                                                                  str(r["mean_test_score"] -
+                                                                      r["mean_train_score"])]))
 
 
 @main.command(name='production')

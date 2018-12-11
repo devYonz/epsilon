@@ -61,7 +61,15 @@ class SVMClassifier(CVClassifier):
         return
 
     def predict(self, X):
+
         return self.classifier.predict(X)
+
+    def score(self, X, y=None):
+        # The following reshape fixes it for naive bayes, but doesnt hold for the neural nets.
+        # y = np.reshape(y, (-1, 1))
+        predicted = self.predict(X)
+        accuracy = np.sum(predicted == predicted) / len(predicted)
+        return accuracy
 
 
 class NBClassifier(CVClassifier):
@@ -76,6 +84,13 @@ class NBClassifier(CVClassifier):
 
     def predict(self, X):
         return self.classifier.predict(X)
+
+    def score(self, X, y=None):
+        # The following reshape fixes it for naive bayes, but doesnt hold for the neural nets.
+        # y = np.reshape(y, (-1, 1))
+        predicted = self.predict(X)
+        accuracy = np.sum(predicted == predicted) / len(predicted)
+        return accuracy
 
 
 class NNClassifier(CVClassifier):

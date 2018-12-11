@@ -1,0 +1,946 @@
+Data set file received: ./datasets/Jumble-for-JIRA.json
+ ========  SVMClassifier
+Classifier sccuracy: 1.0 on same trained samples
+ ========  NBClassifier
+Score / NBClassifier                                       1.0                       1.0                       0.0
+ ========  NNClassifier
+2018-12-10 18:26:00.836633: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-12-10 18:26:00.838098: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 8. Tune using inter_op_parallelism_threads for best performance.
+2018-12-10 18:26:01,181-INFO-#  Training loss at round 0: 4.6119814
+2018-12-10 18:26:07,972-INFO-#  Training loss at round 200: 3.320428
+2018-12-10 18:26:14,985-INFO-#  Training loss at round 400: 3.3200269
+2018-12-10 18:26:21,889-INFO-#  Training loss at round 600: 3.3217783
+2018-12-10 18:26:28,860-INFO-#  Training loss at round 800: 3.3208048
+2018-12-10 18:26:35,651-INFO-#  Training loss at round 1000: 3.3238611
+2018-12-10 18:26:42,640-INFO-#  Training loss at round 1200: 3.3204904
+2018-12-10 18:26:49,504-INFO-#  Training loss at round 1400: 3.318624
+2018-12-10 18:26:56,428-INFO-#  Training loss at round 1600: 3.3175898
+2018-12-10 18:27:02,964-INFO-#  Training loss at round 1800: 3.3172426
+2018-12-10 18:27:09,823-INFO-#  Training loss at round 1999: 3.3190987
+2018-12-10 18:27:10,206-DEBUG-findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/Users/yaberraf/.julia/v0.6/Conda/deps/usr/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-12-10 18:27:10,275-DEBUG-findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('/Users/yaberraf/.julia/v0.6/Conda/deps/usr/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
+2018-12-10 18:27:10,369-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:27:10,928-INFO-#  Training loss at round 0: 4.6188617
+2018-12-10 18:27:17,445-INFO-#  Training loss at round 200: 2.7214458
+2018-12-10 18:27:24,375-INFO-#  Training loss at round 400: 2.7214856
+2018-12-10 18:27:31,335-INFO-#  Training loss at round 600: 2.7219794
+2018-12-10 18:27:38,124-INFO-#  Training loss at round 800: 2.744001
+2018-12-10 18:27:44,947-INFO-#  Training loss at round 1000: 2.7217133
+2018-12-10 18:27:51,638-INFO-#  Training loss at round 1200: 2.7408876
+2018-12-10 18:27:58,413-INFO-#  Training loss at round 1400: 2.7216194
+2018-12-10 18:28:05,141-INFO-#  Training loss at round 1600: 2.729666
+2018-12-10 18:28:12,044-INFO-#  Training loss at round 1800: 2.7320192
+2018-12-10 18:28:18,663-INFO-#  Training loss at round 1999: 2.7239058
+2018-12-10 18:28:18,902-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.tanh.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:28:19,453-INFO-#  Training loss at round 0: 4.6040955
+2018-12-10 18:28:25,948-INFO-#  Training loss at round 200: 3.3123753
+2018-12-10 18:28:32,778-INFO-#  Training loss at round 400: 3.3122947
+2018-12-10 18:28:39,679-INFO-#  Training loss at round 600: 3.3122528
+2018-12-10 18:28:46,524-INFO-#  Training loss at round 800: 3.3122394
+2018-12-10 18:28:53,370-INFO-#  Training loss at round 1000: 3.3122258
+2018-12-10 18:29:00,102-INFO-#  Training loss at round 1200: 3.3122451
+2018-12-10 18:29:07,059-INFO-#  Training loss at round 1400: 3.312226
+2018-12-10 18:29:13,730-INFO-#  Training loss at round 1600: 3.312224
+2018-12-10 18:29:20,378-INFO-#  Training loss at round 1800: 3.3122902
+2018-12-10 18:29:26,988-INFO-#  Training loss at round 1999: 3.3122237
+2018-12-10 18:29:27,154-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:29:27,701-INFO-#  Training loss at round 0: 4.6574707
+2018-12-10 18:29:34,790-INFO-#  Training loss at round 200: 2.7216494
+2018-12-10 18:29:42,001-INFO-#  Training loss at round 400: 2.7215364
+2018-12-10 18:29:48,613-INFO-#  Training loss at round 600: 2.721502
+2018-12-10 18:29:55,408-INFO-#  Training loss at round 800: 2.7214851
+2018-12-10 18:30:01,991-INFO-#  Training loss at round 1000: 2.7214732
+2018-12-10 18:30:09,036-INFO-#  Training loss at round 1200: 2.7214704
+2018-12-10 18:30:16,371-INFO-#  Training loss at round 1400: 2.7214663
+2018-12-10 18:30:23,330-INFO-#  Training loss at round 1600: 2.7214546
+2018-12-10 18:30:30,653-INFO-#  Training loss at round 1800: 2.721462
+2018-12-10 18:30:37,753-INFO-#  Training loss at round 1999: 2.7214632
+2018-12-10 18:30:37,937-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.tanh.0.05>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:30:38,524-INFO-#  Training loss at round 0: 4.6108284
+2018-12-10 18:30:45,337-INFO-#  Training loss at round 200: 1.95874
+2018-12-10 18:30:52,073-INFO-#  Training loss at round 400: 1.1591544
+2018-12-10 18:30:58,945-INFO-#  Training loss at round 600: 0.91113585
+2018-12-10 18:31:05,786-INFO-#  Training loss at round 800: 0.79947704
+2018-12-10 18:31:12,622-INFO-#  Training loss at round 1000: 0.6801918
+2018-12-10 18:31:19,488-INFO-#  Training loss at round 1200: 0.57957345
+2018-12-10 18:31:26,173-INFO-#  Training loss at round 1400: 0.5161398
+2018-12-10 18:31:33,207-INFO-#  Training loss at round 1600: 0.46664867
+2018-12-10 18:31:40,235-INFO-#  Training loss at round 1800: 0.42368746
+2018-12-10 18:31:46,934-INFO-#  Training loss at round 1999: 0.38936803
+2018-12-10 18:31:47,107-INFO-Accuracy: 0.8836952521163047
+2018-12-10 18:31:47,784-INFO-#  Training loss at round 0: 4.686326
+2018-12-10 18:31:55,296-INFO-#  Training loss at round 200: 1.9399558
+2018-12-10 18:32:02,538-INFO-#  Training loss at round 400: 1.4508079
+2018-12-10 18:32:10,150-INFO-#  Training loss at round 600: 1.0841533
+2018-12-10 18:32:17,985-INFO-#  Training loss at round 800: 0.85125136
+2018-12-10 18:32:25,729-INFO-#  Training loss at round 1000: 0.721532
+2018-12-10 18:32:32,993-INFO-#  Training loss at round 1200: 0.6283199
+2018-12-10 18:32:41,751-INFO-#  Training loss at round 1400: 0.5621469
+2018-12-10 18:32:49,605-INFO-#  Training loss at round 1600: 0.57103664
+2018-12-10 18:32:56,928-INFO-#  Training loss at round 1800: 0.52521425
+2018-12-10 18:33:05,007-INFO-#  Training loss at round 1999: 0.44228968
+2018-12-10 18:33:05,175-INFO-Accuracy: 0.9076526857983812
+Score / NNSARSClassifier<E3-8.tanh.0.005>                  0.895673968957343         0.05501376745712751       -0.8406602015002155
+ ========  NNClassifier
+2018-12-10 18:33:05,924-INFO-#  Training loss at round 0: 4.6291914
+2018-12-10 18:33:14,034-INFO-#  Training loss at round 200: 3.3144376
+2018-12-10 18:33:22,202-INFO-#  Training loss at round 400: 3.3195734
+2018-12-10 18:33:30,511-INFO-#  Training loss at round 600: 3.3171716
+2018-12-10 18:33:38,889-INFO-#  Training loss at round 800: 3.321095
+2018-12-10 18:33:47,247-INFO-#  Training loss at round 1000: 3.3181174
+2018-12-10 18:33:56,045-INFO-#  Training loss at round 1200: 3.3191116
+2018-12-10 18:34:04,280-INFO-#  Training loss at round 1400: 3.318338
+2018-12-10 18:34:12,349-INFO-#  Training loss at round 1600: 3.3206723
+2018-12-10 18:34:20,832-INFO-#  Training loss at round 1800: 3.320864
+2018-12-10 18:34:28,377-INFO-#  Training loss at round 1999: 3.3172305
+2018-12-10 18:34:28,560-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:34:29,289-INFO-#  Training loss at round 0: 4.6126986
+2018-12-10 18:34:37,202-INFO-#  Training loss at round 200: 2.721451
+2018-12-10 18:34:45,563-INFO-#  Training loss at round 400: 2.77479
+2018-12-10 18:34:53,763-INFO-#  Training loss at round 600: 2.735757
+2018-12-10 18:35:01,551-INFO-#  Training loss at round 800: 2.7222483
+2018-12-10 18:35:10,159-INFO-#  Training loss at round 1000: 2.7214265
+2018-12-10 18:35:18,798-INFO-#  Training loss at round 1200: 2.7214315
+2018-12-10 18:35:26,690-INFO-#  Training loss at round 1400: 2.7216296
+2018-12-10 18:35:34,463-INFO-#  Training loss at round 1600: 2.7226071
+2018-12-10 18:35:42,211-INFO-#  Training loss at round 1800: 2.7306535
+2018-12-10 18:35:50,720-INFO-#  Training loss at round 1999: 2.7237093
+2018-12-10 18:35:50,988-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.tanh.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:35:51,736-INFO-#  Training loss at round 0: 4.6130834
+2018-12-10 18:36:00,022-INFO-#  Training loss at round 200: 3.3123763
+2018-12-10 18:36:08,644-INFO-#  Training loss at round 400: 3.312264
+2018-12-10 18:36:17,282-INFO-#  Training loss at round 600: 3.1343958
+2018-12-10 18:36:25,686-INFO-#  Training loss at round 800: 3.1714375
+2018-12-10 18:36:33,764-INFO-#  Training loss at round 1000: 3.1279304
+2018-12-10 18:36:41,947-INFO-#  Training loss at round 1200: 3.0938444
+2018-12-10 18:36:50,290-INFO-#  Training loss at round 1400: 3.3051655
+2018-12-10 18:36:57,825-INFO-#  Training loss at round 1600: 3.3050911
+2018-12-10 18:37:05,468-INFO-#  Training loss at round 1800: 3.3049724
+2018-12-10 18:37:13,265-INFO-#  Training loss at round 1999: 3.3049197
+2018-12-10 18:37:13,476-INFO-Accuracy: 0.12550607287449392
+2018-12-10 18:37:14,307-INFO-#  Training loss at round 0: 4.6287932
+2018-12-10 18:37:22,478-INFO-#  Training loss at round 200: 2.7215931
+2018-12-10 18:37:30,857-INFO-#  Training loss at round 400: 2.7215188
+2018-12-10 18:37:39,174-INFO-#  Training loss at round 600: 2.7214985
+2018-12-10 18:37:47,253-INFO-#  Training loss at round 800: 2.72149
+2018-12-10 18:37:55,234-INFO-#  Training loss at round 1000: 2.7214556
+2018-12-10 18:38:03,539-INFO-#  Training loss at round 1200: 2.721473
+2018-12-10 18:38:11,384-INFO-#  Training loss at round 1400: 2.7214715
+2018-12-10 18:38:19,059-INFO-#  Training loss at round 1600: 2.7214456
+2018-12-10 18:38:27,155-INFO-#  Training loss at round 1800: 2.7214832
+2018-12-10 18:38:35,076-INFO-#  Training loss at round 1999: 2.7214506
+2018-12-10 18:38:35,295-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.tanh.0.05>                   0.31845575902738676       0.3167998590619713        -0.001655899965415486
+ ========  NNClassifier
+2018-12-10 18:38:36,101-INFO-#  Training loss at round 0: 4.6236944
+2018-12-10 18:38:43,817-INFO-#  Training loss at round 200: 2.1573079
+2018-12-10 18:38:51,656-INFO-#  Training loss at round 400: 1.5973316
+2018-12-10 18:38:59,868-INFO-#  Training loss at round 600: 1.413983
+2018-12-10 18:39:07,430-INFO-#  Training loss at round 800: 1.2723972
+2018-12-10 18:39:15,321-INFO-#  Training loss at round 1000: 1.1953397
+2018-12-10 18:39:23,405-INFO-#  Training loss at round 1200: 1.0900644
+2018-12-10 18:39:30,989-INFO-#  Training loss at round 1400: 1.0334395
+2018-12-10 18:39:38,691-INFO-#  Training loss at round 1600: 0.9293185
+2018-12-10 18:39:46,582-INFO-#  Training loss at round 1800: 0.88405573
+2018-12-10 18:39:54,044-INFO-#  Training loss at round 1999: 0.8090061
+2018-12-10 18:39:54,227-INFO-Accuracy: 0.7659182922340817
+2018-12-10 18:39:54,933-INFO-#  Training loss at round 0: 4.6338215
+2018-12-10 18:40:02,585-INFO-#  Training loss at round 200: 2.7302916
+2018-12-10 18:40:10,543-INFO-#  Training loss at round 400: 2.7246249
+2018-12-10 18:40:18,385-INFO-#  Training loss at round 600: 2.7231479
+2018-12-10 18:40:25,930-INFO-#  Training loss at round 800: 2.7225144
+2018-12-10 18:40:33,658-INFO-#  Training loss at round 1000: 2.7221997
+2018-12-10 18:40:41,393-INFO-#  Training loss at round 1200: 2.7219853
+2018-12-10 18:40:49,215-INFO-#  Training loss at round 1400: 2.721857
+2018-12-10 18:40:57,183-INFO-#  Training loss at round 1600: 2.7217705
+2018-12-10 18:41:05,713-INFO-#  Training loss at round 1800: 2.7216992
+2018-12-10 18:41:13,494-INFO-#  Training loss at round 1999: 2.7216659
+2018-12-10 18:41:13,679-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.tanh.0.005>                  0.6386618687071807        0.08887491424960926       -0.5497869544575714
+ ========  NNClassifier
+2018-12-10 18:41:14,256-INFO-#  Training loss at round 0: 4.6151667
+2018-12-10 18:41:21,651-INFO-#  Training loss at round 200: 3.322395
+2018-12-10 18:41:29,037-INFO-#  Training loss at round 400: 3.312194
+2018-12-10 18:41:36,933-INFO-#  Training loss at round 600: 3.3175766
+2018-12-10 18:41:44,744-INFO-#  Training loss at round 800: 3.3179562
+2018-12-10 18:41:52,221-INFO-#  Training loss at round 1000: 3.3199153
+2018-12-10 18:41:59,920-INFO-#  Training loss at round 1200: 3.325892
+2018-12-10 18:42:07,597-INFO-#  Training loss at round 1400: 3.329021
+2018-12-10 18:42:15,515-INFO-#  Training loss at round 1600: 3.331991
+2018-12-10 18:42:22,901-INFO-#  Training loss at round 1800: 3.333304
+2018-12-10 18:42:30,208-INFO-#  Training loss at round 1999: 3.333694
+2018-12-10 18:42:30,470-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:42:31,010-INFO-#  Training loss at round 0: 4.613424
+2018-12-10 18:42:39,063-INFO-#  Training loss at round 200: 2.721444
+2018-12-10 18:42:47,019-INFO-#  Training loss at round 400: 8.6515665
+2018-12-10 18:42:54,800-INFO-#  Training loss at round 600: 2.7214482
+2018-12-10 18:43:02,327-INFO-#  Training loss at round 800: 2.7214274
+2018-12-10 18:43:10,067-INFO-#  Training loss at round 1000: 2.7214448
+2018-12-10 18:43:17,644-INFO-#  Training loss at round 1200: 2.7676413
+2018-12-10 18:43:25,858-INFO-#  Training loss at round 1400: 18.82989
+2018-12-10 18:43:34,719-INFO-#  Training loss at round 1600: 2.7215712
+2018-12-10 18:43:42,256-INFO-#  Training loss at round 1800: 2.7214487
+2018-12-10 18:43:49,724-INFO-#  Training loss at round 1999: 2.7214417
+2018-12-10 18:43:49,925-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.tanh.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:43:50,568-INFO-#  Training loss at round 0: 4.6228595
+2018-12-10 18:43:59,367-INFO-#  Training loss at round 200: 3.0384867
+2018-12-10 18:44:07,550-INFO-#  Training loss at round 400: 2.919923
+2018-12-10 18:44:14,862-INFO-#  Training loss at round 600: 2.796981
+2018-12-10 18:44:23,143-INFO-#  Training loss at round 800: 2.7616308
+2018-12-10 18:44:31,235-INFO-#  Training loss at round 1000: 2.7656503
+2018-12-10 18:44:38,991-INFO-#  Training loss at round 1200: 2.7360985
+2018-12-10 18:44:46,342-INFO-#  Training loss at round 1400: 2.8496313
+2018-12-10 18:44:53,730-INFO-#  Training loss at round 1600: 2.8084133
+2018-12-10 18:45:01,156-INFO-#  Training loss at round 1800: 2.7951157
+2018-12-10 18:45:08,713-INFO-#  Training loss at round 1999: 2.7887964
+2018-12-10 18:45:08,897-INFO-Accuracy: 0.22635259477364741
+2018-12-10 18:45:09,470-INFO-#  Training loss at round 0: 4.6658773
+2018-12-10 18:45:16,568-INFO-#  Training loss at round 200: 2.7117863
+2018-12-10 18:45:23,830-INFO-#  Training loss at round 400: 2.7100515
+2018-12-10 18:45:31,257-INFO-#  Training loss at round 600: 2.7088108
+2018-12-10 18:45:39,409-INFO-#  Training loss at round 800: 2.7088025
+2018-12-10 18:45:46,997-INFO-#  Training loss at round 1000: 2.7087865
+2018-12-10 18:45:54,766-INFO-#  Training loss at round 1200: 2.7103236
+2018-12-10 18:46:02,524-INFO-#  Training loss at round 1400: 2.7088518
+2018-12-10 18:46:10,622-INFO-#  Training loss at round 1600: 2.7088346
+2018-12-10 18:46:18,292-INFO-#  Training loss at round 1800: 2.708799
+2018-12-10 18:46:25,860-INFO-#  Training loss at round 1999: 2.7088318
+2018-12-10 18:46:26,030-INFO-Accuracy: 0.5136129506990434
+Score / NNSARSClassifier<E3-16.tanh.0.05>                  0.36998277273634544       0.23732959267988896       -0.1326531800564565
+ ========  NNClassifier
+2018-12-10 18:46:26,773-INFO-#  Training loss at round 0: 4.6352963
+2018-12-10 18:46:34,289-INFO-#  Training loss at round 200: 0.32398704
+2018-12-10 18:46:41,601-INFO-#  Training loss at round 400: 0.059633948
+2018-12-10 18:46:48,747-INFO-#  Training loss at round 600: 0.026053587
+2018-12-10 18:46:56,249-INFO-#  Training loss at round 800: 0.013370035
+2018-12-10 18:47:03,704-INFO-#  Training loss at round 1000: 0.007250755
+2018-12-10 18:47:11,050-INFO-#  Training loss at round 1200: 0.0047481335
+2018-12-10 18:47:18,488-INFO-#  Training loss at round 1400: 0.0034266647
+2018-12-10 18:47:26,194-INFO-#  Training loss at round 1600: 0.002488074
+2018-12-10 18:47:33,701-INFO-#  Training loss at round 1800: 0.0019445986
+2018-12-10 18:47:40,991-INFO-#  Training loss at round 1999: 0.0015661988
+2018-12-10 18:47:41,176-INFO-Accuracy: 1.0
+2018-12-10 18:47:41,777-INFO-#  Training loss at round 0: 4.642716
+2018-12-10 18:47:49,177-INFO-#  Training loss at round 200: 1.855085
+2018-12-10 18:47:56,357-INFO-#  Training loss at round 400: 0.6496927
+2018-12-10 18:48:03,475-INFO-#  Training loss at round 600: 0.24363793
+2018-12-10 18:48:10,794-INFO-#  Training loss at round 800: 0.124528244
+2018-12-10 18:48:17,997-INFO-#  Training loss at round 1000: 0.09792891
+2018-12-10 18:48:25,246-INFO-#  Training loss at round 1200: 0.06291293
+2018-12-10 18:48:32,553-INFO-#  Training loss at round 1400: 0.045510612
+2018-12-10 18:48:39,945-INFO-#  Training loss at round 1600: 0.065086395
+2018-12-10 18:48:47,196-INFO-#  Training loss at round 1800: 0.043926973
+2018-12-10 18:48:54,610-INFO-#  Training loss at round 1999: 0.034587882
+2018-12-10 18:48:54,785-INFO-Accuracy: 0.9959529065489331
+Score / NNSARSClassifier<E3-16.tanh.0.005>                 0.9979764532744666        0.06549996032394081       -0.9324764929505258
+ ========  NNClassifier
+2018-12-10 18:48:55,551-INFO-#  Training loss at round 0: 4.595765
+2018-12-10 18:49:03,702-INFO-#  Training loss at round 200: 3.3122034
+2018-12-10 18:49:12,339-INFO-#  Training loss at round 400: 3.312194
+2018-12-10 18:49:21,089-INFO-#  Training loss at round 600: 3.3121905
+2018-12-10 18:49:30,092-INFO-#  Training loss at round 800: 3.3165188
+2018-12-10 18:49:38,689-INFO-#  Training loss at round 1000: 3.3172987
+2018-12-10 18:49:47,861-INFO-#  Training loss at round 1200: 3.3176682
+2018-12-10 18:49:56,318-INFO-#  Training loss at round 1400: 3.3178673
+2018-12-10 18:50:04,962-INFO-#  Training loss at round 1600: 3.321315
+2018-12-10 18:50:13,280-INFO-#  Training loss at round 1800: 3.3222523
+2018-12-10 18:50:21,435-INFO-#  Training loss at round 1999: 3.3228831
+2018-12-10 18:50:21,614-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:50:22,323-INFO-#  Training loss at round 0: 4.600459
+2018-12-10 18:50:30,441-INFO-#  Training loss at round 200: 2.721428
+2018-12-10 18:50:38,651-INFO-#  Training loss at round 400: 15.272696
+2018-12-10 18:50:47,662-INFO-#  Training loss at round 600: 2.73816
+2018-12-10 18:50:56,472-INFO-#  Training loss at round 800: 2.72143
+2018-12-10 18:51:05,015-INFO-#  Training loss at round 1000: 2.7214296
+2018-12-10 18:51:13,774-INFO-#  Training loss at round 1200: 2.721441
+2018-12-10 18:51:22,596-INFO-#  Training loss at round 1400: 3.9347725
+2018-12-10 18:51:31,079-INFO-#  Training loss at round 1600: 5.410797
+2018-12-10 18:51:39,653-INFO-#  Training loss at round 1800: 2.7214334
+2018-12-10 18:51:48,758-INFO-#  Training loss at round 1999: 2.7214415
+2018-12-10 18:51:48,970-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.tanh.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:51:49,853-INFO-#  Training loss at round 0: 4.631483
+2018-12-10 18:51:58,400-INFO-#  Training loss at round 200: 3.30904
+2018-12-10 18:52:06,881-INFO-#  Training loss at round 400: 3.296533
+2018-12-10 18:52:15,786-INFO-#  Training loss at round 600: 3.298955
+2018-12-10 18:52:24,586-INFO-#  Training loss at round 800: 3.301029
+2018-12-10 18:52:33,383-INFO-#  Training loss at round 1000: 3.3011532
+2018-12-10 18:52:41,855-INFO-#  Training loss at round 1200: 3.300267
+2018-12-10 18:52:50,400-INFO-#  Training loss at round 1400: 3.2959409
+2018-12-10 18:52:58,889-INFO-#  Training loss at round 1600: 3.3191264
+2018-12-10 18:53:07,674-INFO-#  Training loss at round 1800: 3.3121982
+2018-12-10 18:53:16,155-INFO-#  Training loss at round 1999: 3.3122027
+2018-12-10 18:53:16,360-INFO-Accuracy: 0.12403386087596614
+2018-12-10 18:53:17,153-INFO-#  Training loss at round 0: 4.6059484
+2018-12-10 18:53:25,700-INFO-#  Training loss at round 200: 2.7214804
+2018-12-10 18:53:34,492-INFO-#  Training loss at round 400: 2.7214673
+2018-12-10 18:53:43,712-INFO-#  Training loss at round 600: 2.7214594
+2018-12-10 18:53:52,559-INFO-#  Training loss at round 800: 2.721464
+2018-12-10 18:54:01,225-INFO-#  Training loss at round 1000: 2.7214556
+2018-12-10 18:54:09,831-INFO-#  Training loss at round 1200: 2.721478
+2018-12-10 18:54:18,329-INFO-#  Training loss at round 1400: 2.7214508
+2018-12-10 18:54:26,773-INFO-#  Training loss at round 1600: 2.7214742
+2018-12-10 18:54:35,461-INFO-#  Training loss at round 1800: 2.7214499
+2018-12-10 18:54:43,993-INFO-#  Training loss at round 1999: 2.7214465
+2018-12-10 18:54:44,183-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.tanh.0.05>                  0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 18:54:44,908-INFO-#  Training loss at round 0: 4.6325097
+2018-12-10 18:54:53,174-INFO-#  Training loss at round 200: 0.67457086
+2018-12-10 18:55:01,621-INFO-#  Training loss at round 400: 0.15577132
+2018-12-10 18:55:09,966-INFO-#  Training loss at round 600: 0.067303985
+2018-12-10 18:55:18,336-INFO-#  Training loss at round 800: 0.036442302
+2018-12-10 18:55:26,787-INFO-#  Training loss at round 1000: 0.023048436
+2018-12-10 18:55:35,740-INFO-#  Training loss at round 1200: 0.015756074
+2018-12-10 18:55:44,198-INFO-#  Training loss at round 1400: 0.011387343
+2018-12-10 18:55:52,726-INFO-#  Training loss at round 1600: 0.008646323
+2018-12-10 18:56:01,316-INFO-#  Training loss at round 1800: 0.006672531
+2018-12-10 18:56:10,098-INFO-#  Training loss at round 1999: 0.005251406
+2018-12-10 18:56:10,297-INFO-Accuracy: 1.0
+2018-12-10 18:56:11,128-INFO-#  Training loss at round 0: 4.6048894
+2018-12-10 18:56:20,141-INFO-#  Training loss at round 200: 1.110094
+2018-12-10 18:56:29,098-INFO-#  Training loss at round 400: 0.54786205
+2018-12-10 18:56:38,098-INFO-#  Training loss at round 600: 0.303628
+2018-12-10 18:56:46,897-INFO-#  Training loss at round 800: 0.22997077
+2018-12-10 18:56:55,802-INFO-#  Training loss at round 1000: 0.1617688
+2018-12-10 18:57:05,552-INFO-#  Training loss at round 1200: 0.14840834
+2018-12-10 18:57:14,765-INFO-#  Training loss at round 1400: 0.11504563
+2018-12-10 18:57:24,674-INFO-#  Training loss at round 1600: 0.1326806
+2018-12-10 18:57:33,478-INFO-#  Training loss at round 1800: 0.10046796
+2018-12-10 18:57:42,348-INFO-#  Training loss at round 1999: 0.08553551
+2018-12-10 18:57:42,570-INFO-Accuracy: 0.9823399558498896
+Score / NNSARSClassifier<E5-16.tanh.0.005>                 0.9911699779249448        0.05427935412250505       -0.9368906238024397
+ ========  NNClassifier
+2018-12-10 18:57:43,180-INFO-#  Training loss at round 0: 4.6215615
+2018-12-10 18:57:52,281-INFO-#  Training loss at round 200: 3.3323894
+2018-12-10 18:58:01,416-INFO-#  Training loss at round 400: 3.3142931
+2018-12-10 18:58:09,701-INFO-#  Training loss at round 600: 3.3122027
+2018-12-10 18:58:17,891-INFO-#  Training loss at round 800: 3.3122027
+2018-12-10 18:58:26,029-INFO-#  Training loss at round 1000: 3.3122005
+2018-12-10 18:58:34,159-INFO-#  Training loss at round 1200: 3.3300965
+2018-12-10 18:58:42,423-INFO-#  Training loss at round 1400: 3.3352745
+2018-12-10 18:58:50,643-INFO-#  Training loss at round 1600: 3.3392696
+2018-12-10 18:58:58,882-INFO-#  Training loss at round 1800: 3.3396206
+2018-12-10 18:59:07,114-INFO-#  Training loss at round 1999: 3.3524146
+2018-12-10 18:59:07,284-INFO-Accuracy: 0.07949944792050055
+2018-12-10 18:59:07,850-INFO-#  Training loss at round 0: 4.6223526
+2018-12-10 18:59:16,115-INFO-#  Training loss at round 200: 2.752985
+2018-12-10 18:59:24,316-INFO-#  Training loss at round 400: 2.7214272
+2018-12-10 18:59:32,563-INFO-#  Training loss at round 600: 2.7214382
+2018-12-10 18:59:40,863-INFO-#  Training loss at round 800: 23.378693
+2018-12-10 18:59:49,058-INFO-#  Training loss at round 1000: 20.431395
+2018-12-10 18:59:57,324-INFO-#  Training loss at round 1200: 2.7325983
+2018-12-10 19:00:05,519-INFO-#  Training loss at round 1400: 2.7214503
+2018-12-10 19:00:13,808-INFO-#  Training loss at round 1600: 2.7214446
+2018-12-10 19:00:22,043-INFO-#  Training loss at round 1800: 2.7214286
+2018-12-10 19:00:30,275-INFO-#  Training loss at round 1999: 2.754929
+2018-12-10 19:00:30,446-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.tanh.0.5>                   0.2954524465503901        0.06201693043798307       -0.23343551611240704
+ ========  NNClassifier
+2018-12-10 19:00:31,142-INFO-#  Training loss at round 0: 4.6219907
+2018-12-10 19:00:39,474-INFO-#  Training loss at round 200: 2.3046536
+2018-12-10 19:00:47,659-INFO-#  Training loss at round 400: 2.3072486
+2018-12-10 19:00:55,947-INFO-#  Training loss at round 600: 2.6094658
+2018-12-10 19:01:04,180-INFO-#  Training loss at round 800: 2.6260352
+2018-12-10 19:01:12,546-INFO-#  Training loss at round 1000: 2.456871
+2018-12-10 19:01:20,745-INFO-#  Training loss at round 1200: 2.7439435
+2018-12-10 19:01:28,956-INFO-#  Training loss at round 1400: 2.6911862
+2018-12-10 19:01:37,169-INFO-#  Training loss at round 1600: 2.676002
+2018-12-10 19:01:45,412-INFO-#  Training loss at round 1800: 2.7621326
+2018-12-10 19:01:53,587-INFO-#  Training loss at round 1999: 2.7245183
+2018-12-10 19:01:53,766-INFO-Accuracy: 0.21715126978284874
+2018-12-10 19:01:54,422-INFO-#  Training loss at round 0: 4.5807533
+2018-12-10 19:02:02,524-INFO-#  Training loss at round 200: 2.3790908
+2018-12-10 19:02:10,766-INFO-#  Training loss at round 400: 2.3721757
+2018-12-10 19:02:19,001-INFO-#  Training loss at round 600: 2.3674824
+2018-12-10 19:02:27,204-INFO-#  Training loss at round 800: 2.368338
+2018-12-10 19:02:35,459-INFO-#  Training loss at round 1000: 2.72544
+2018-12-10 19:02:43,704-INFO-#  Training loss at round 1200: 2.72143
+2018-12-10 19:02:51,837-INFO-#  Training loss at round 1400: 2.7214563
+2018-12-10 19:03:00,090-INFO-#  Training loss at round 1600: 2.7214289
+2018-12-10 19:03:08,323-INFO-#  Training loss at round 1800: 2.721431
+2018-12-10 19:03:16,462-INFO-#  Training loss at round 1999: 2.7214556
+2018-12-10 19:03:16,637-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.tanh.0.05>                  0.3642783574815642        0.10819058753879249       -0.2560877699427717
+ ========  NNClassifier
+2018-12-10 19:03:17,202-INFO-#  Training loss at round 0: 4.602128
+2018-12-10 19:03:25,474-INFO-#  Training loss at round 200: 0.02005304
+2018-12-10 19:03:34,558-INFO-#  Training loss at round 400: 0.0047063734
+2018-12-10 19:03:43,001-INFO-#  Training loss at round 600: 0.0022441843
+2018-12-10 19:03:51,206-INFO-#  Training loss at round 800: 0.0013338582
+2018-12-10 19:03:59,447-INFO-#  Training loss at round 1000: 0.0008936525
+2018-12-10 19:04:07,670-INFO-#  Training loss at round 1200: 0.0006417317
+2018-12-10 19:04:15,928-INFO-#  Training loss at round 1400: 0.00048290548
+2018-12-10 19:04:24,210-INFO-#  Training loss at round 1600: 0.00037487753
+2018-12-10 19:04:32,402-INFO-#  Training loss at round 1800: 0.00029902937
+2018-12-10 19:04:40,629-INFO-#  Training loss at round 1999: 0.00024345439
+2018-12-10 19:04:40,810-INFO-Accuracy: 1.0
+2018-12-10 19:04:41,394-INFO-#  Training loss at round 0: 4.7192206
+2018-12-10 19:04:49,618-INFO-#  Training loss at round 200: 0.3987532
+2018-12-10 19:04:57,663-INFO-#  Training loss at round 400: 0.04345024
+2018-12-10 19:05:05,693-INFO-#  Training loss at round 600: 0.012952971
+2018-12-10 19:05:13,877-INFO-#  Training loss at round 800: 0.0053605163
+2018-12-10 19:05:21,938-INFO-#  Training loss at round 1000: 0.0029551438
+2018-12-10 19:05:30,006-INFO-#  Training loss at round 1200: 0.0019320372
+2018-12-10 19:05:38,080-INFO-#  Training loss at round 1400: 0.0013563952
+2018-12-10 19:05:46,110-INFO-#  Training loss at round 1600: 0.0009983935
+2018-12-10 19:05:54,090-INFO-#  Training loss at round 1800: 0.00076963374
+2018-12-10 19:06:02,245-INFO-#  Training loss at round 1999: 0.00061154005
+2018-12-10 19:06:02,414-INFO-Accuracy: 1.0
+Score / NNSARSClassifier<E3-32.tanh.0.005>                 1.0                       0.06807585737526484       -0.9319241426247351
+ ========  NNClassifier
+2018-12-10 19:06:03,136-INFO-#  Training loss at round 0: 4.604439
+2018-12-10 19:06:12,356-INFO-#  Training loss at round 200: 3.3311172
+2018-12-10 19:06:21,435-INFO-#  Training loss at round 400: 3.3122003
+2018-12-10 19:06:30,743-INFO-#  Training loss at round 600: 3.312199
+2018-12-10 19:06:39,901-INFO-#  Training loss at round 800: 3.3121998
+2018-12-10 19:06:49,124-INFO-#  Training loss at round 1000: 3.3122056
+2018-12-10 19:06:58,224-INFO-#  Training loss at round 1200: 3.3247306
+2018-12-10 19:07:07,321-INFO-#  Training loss at round 1400: 3.3292298
+2018-12-10 19:07:16,450-INFO-#  Training loss at round 1600: 3.3420014
+2018-12-10 19:07:25,658-INFO-#  Training loss at round 1800: 3.35137
+2018-12-10 19:07:34,891-INFO-#  Training loss at round 1999: 3.3628116
+2018-12-10 19:07:35,084-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:07:35,889-INFO-#  Training loss at round 0: 4.599976
+2018-12-10 19:07:45,061-INFO-#  Training loss at round 200: 2.7241542
+2018-12-10 19:07:54,214-INFO-#  Training loss at round 400: 2.7214289
+2018-12-10 19:08:03,338-INFO-#  Training loss at round 600: 2.77285
+2018-12-10 19:08:12,655-INFO-#  Training loss at round 800: 32.053993
+2018-12-10 19:08:22,103-INFO-#  Training loss at round 1000: 10.486977
+2018-12-10 19:08:31,261-INFO-#  Training loss at round 1200: 5.594156
+2018-12-10 19:08:40,450-INFO-#  Training loss at round 1400: 2.7214468
+2018-12-10 19:08:49,647-INFO-#  Training loss at round 1600: 2.7214425
+2018-12-10 19:08:58,845-INFO-#  Training loss at round 1800: 2.7214289
+2018-12-10 19:09:07,947-INFO-#  Training loss at round 1999: 2.721436
+2018-12-10 19:09:08,130-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.tanh.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:09:08,843-INFO-#  Training loss at round 0: 4.65791
+2018-12-10 19:09:18,020-INFO-#  Training loss at round 200: 3.3122244
+2018-12-10 19:09:27,200-INFO-#  Training loss at round 400: 3.3122272
+2018-12-10 19:09:36,398-INFO-#  Training loss at round 600: 3.3122084
+2018-12-10 19:09:45,552-INFO-#  Training loss at round 800: 3.3122048
+2018-12-10 19:09:54,677-INFO-#  Training loss at round 1000: 3.3122106
+2018-12-10 19:10:03,847-INFO-#  Training loss at round 1200: 3.312366
+2018-12-10 19:10:13,095-INFO-#  Training loss at round 1400: 3.3130076
+2018-12-10 19:10:22,247-INFO-#  Training loss at round 1600: 3.3129988
+2018-12-10 19:10:31,557-INFO-#  Training loss at round 1800: 3.312298
+2018-12-10 19:10:41,392-INFO-#  Training loss at round 1999: 3.3124425
+2018-12-10 19:10:41,582-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:10:42,347-INFO-#  Training loss at round 0: 4.5980587
+2018-12-10 19:10:51,916-INFO-#  Training loss at round 200: 2.7232547
+2018-12-10 19:11:01,501-INFO-#  Training loss at round 400: 2.7214453
+2018-12-10 19:11:11,947-INFO-#  Training loss at round 600: 2.7225204
+2018-12-10 19:11:21,218-INFO-#  Training loss at round 800: 2.721434
+2018-12-10 19:11:31,174-INFO-#  Training loss at round 1000: 2.72471
+2018-12-10 19:11:41,153-INFO-#  Training loss at round 1200: 2.7215364
+2018-12-10 19:11:50,426-INFO-#  Training loss at round 1400: 2.7219837
+2018-12-10 19:12:00,168-INFO-#  Training loss at round 1600: 2.721451
+2018-12-10 19:12:09,951-INFO-#  Training loss at round 1800: 2.7214541
+2018-12-10 19:12:19,638-INFO-#  Training loss at round 1999: 2.721769
+2018-12-10 19:12:19,852-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.tanh.0.05>                  0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:12:20,741-INFO-#  Training loss at round 0: 4.6110597
+2018-12-10 19:12:30,892-INFO-#  Training loss at round 200: 0.027854597
+2018-12-10 19:12:40,398-INFO-#  Training loss at round 400: 0.005802073
+2018-12-10 19:12:50,064-INFO-#  Training loss at round 600: 0.0024657727
+2018-12-10 19:12:59,805-INFO-#  Training loss at round 800: 0.0014948704
+2018-12-10 19:13:09,810-INFO-#  Training loss at round 1000: 0.0010171467
+2018-12-10 19:13:19,846-INFO-#  Training loss at round 1200: 0.00074103556
+2018-12-10 19:13:30,362-INFO-#  Training loss at round 1400: 0.0005642829
+2018-12-10 19:13:40,957-INFO-#  Training loss at round 1600: 0.00044327028
+2018-12-10 19:13:50,845-INFO-#  Training loss at round 1800: 0.00035663403
+2018-12-10 19:14:01,455-INFO-#  Training loss at round 1999: 0.00029257772
+2018-12-10 19:14:01,648-INFO-Accuracy: 1.0
+2018-12-10 19:14:02,542-INFO-#  Training loss at round 0: 4.6165237
+2018-12-10 19:14:13,488-INFO-#  Training loss at round 200: 1.6165295
+2018-12-10 19:14:23,256-INFO-#  Training loss at round 400: 0.76796526
+2018-12-10 19:14:32,828-INFO-#  Training loss at round 600: 0.5040969
+^[^[2018-12-10 19:14:42,836-INFO-#  Training loss at round 800: 0.3180706
+2018-12-10 19:14:52,937-INFO-#  Training loss at round 1000: 0.25359732
+2018-12-10 19:15:02,797-INFO-#  Training loss at round 1200: 0.17700835
+2018-12-10 19:15:12,974-INFO-#  Training loss at round 1400: 0.18481101
+2018-12-10 19:15:22,628-INFO-#  Training loss at round 1600: 0.2799572
+2018-12-10 19:15:32,355-INFO-#  Training loss at round 1800: 0.1111723
+2018-12-10 19:15:41,967-INFO-#  Training loss at round 1999: 0.09211033
+2018-12-10 19:15:42,168-INFO-Accuracy: 0.9819720382634289
+Score / NNSARSClassifier<E5-32.tanh.0.005>                 0.9909860191317145        0.061452054393845955      -0.9295339647378685
+ ========  NNClassifier
+2018-12-10 19:15:42,780-INFO-#  Training loss at round 0: 4.6151357
+2018-12-10 19:15:49,503-INFO-#  Training loss at round 200: 3.3125806
+2018-12-10 19:15:56,033-INFO-#  Training loss at round 400: 3.312348
+2018-12-10 19:16:02,542-INFO-#  Training loss at round 600: 3.312284
+2018-12-10 19:16:09,231-INFO-#  Training loss at round 800: 3.3122559
+2018-12-10 19:16:15,328-INFO-#  Training loss at round 1000: 3.3122387
+2018-12-10 19:16:21,256-INFO-#  Training loss at round 1200: 3.3122244
+2018-12-10 19:16:27,667-INFO-#  Training loss at round 1400: 3.3122268
+2018-12-10 19:16:33,885-INFO-#  Training loss at round 1600: 3.3122132
+2018-12-10 19:16:39,972-INFO-#  Training loss at round 1800: 3.3122082
+2018-12-10 19:16:45,913-INFO-#  Training loss at round 1999: 3.3122082
+2018-12-10 19:16:46,080-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:16:46,686-INFO-#  Training loss at round 0: 4.6198497
+2018-12-10 19:16:53,543-INFO-#  Training loss at round 200: 2.721652
+2018-12-10 19:16:59,733-INFO-#  Training loss at round 400: 2.7215247
+2018-12-10 19:17:06,523-INFO-#  Training loss at round 600: 2.7214959
+2018-12-10 19:17:12,871-INFO-#  Training loss at round 800: 2.7214792
+2018-12-10 19:17:19,990-INFO-#  Training loss at round 1000: 2.7214732
+2018-12-10 19:17:26,299-INFO-#  Training loss at round 1200: 2.7214677
+2018-12-10 19:17:32,972-INFO-#  Training loss at round 1400: 2.7214642
+2018-12-10 19:17:39,631-INFO-#  Training loss at round 1600: 2.7214627
+2018-12-10 19:17:46,177-INFO-#  Training loss at round 1800: 2.7214603
+2018-12-10 19:17:52,466-INFO-#  Training loss at round 1999: 2.7214565
+2018-12-10 19:17:52,643-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.relu.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:17:53,304-INFO-#  Training loss at round 0: 4.616354
+2018-12-10 19:17:59,338-INFO-#  Training loss at round 200: 2.9956267
+2018-12-10 19:18:05,178-INFO-#  Training loss at round 400: 1.979826
+2018-12-10 19:18:11,092-INFO-#  Training loss at round 600: 1.6672223
+2018-12-10 19:18:17,390-INFO-#  Training loss at round 800: 1.5527338
+2018-12-10 19:18:23,379-INFO-#  Training loss at round 1000: 1.9547216
+2018-12-10 19:18:29,502-INFO-#  Training loss at round 1200: 1.4941255
+2018-12-10 19:18:35,621-INFO-#  Training loss at round 1400: 1.354688
+2018-12-10 19:18:42,473-INFO-#  Training loss at round 1600: 1.3369709
+2018-12-10 19:18:48,809-INFO-#  Training loss at round 1800: 2.2868664
+2018-12-10 19:18:54,982-INFO-#  Training loss at round 1999: 1.4113458
+2018-12-10 19:18:55,161-INFO-Accuracy: 0.5925653294074347
+2018-12-10 19:18:55,750-INFO-#  Training loss at round 0: 4.6313777
+2018-12-10 19:19:01,961-INFO-#  Training loss at round 200: 2.1736686
+2018-12-10 19:19:07,956-INFO-#  Training loss at round 400: 2.1571004
+2018-12-10 19:19:13,778-INFO-#  Training loss at round 600: 2.1652749
+2018-12-10 19:19:19,948-INFO-#  Training loss at round 800: 2.135178
+2018-12-10 19:19:26,074-INFO-#  Training loss at round 1000: 2.1605916
+2018-12-10 19:19:31,916-INFO-#  Training loss at round 1200: 2.1685054
+2018-12-10 19:19:37,728-INFO-#  Training loss at round 1400: 2.1632605
+2018-12-10 19:19:43,653-INFO-#  Training loss at round 1600: 2.7214928
+2018-12-10 19:19:49,582-INFO-#  Training loss at round 1800: 2.721446
+2018-12-10 19:19:55,130-INFO-#  Training loss at round 1999: 2.7214367
+2018-12-10 19:19:55,296-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.relu.0.05>                   0.5519853872938572        0.11702060961384768       -0.43496477768000946
+ ========  NNClassifier
+2018-12-10 19:19:55,854-INFO-#  Training loss at round 0: 4.6185694
+2018-12-10 19:20:01,439-INFO-#  Training loss at round 200: 0.9141216
+2018-12-10 19:20:06,915-INFO-#  Training loss at round 400: 0.17442241
+2018-12-10 19:20:12,289-INFO-#  Training loss at round 600: 0.052268576
+2018-12-10 19:20:18,175-INFO-#  Training loss at round 800: 0.020782644
+2018-12-10 19:20:23,866-INFO-#  Training loss at round 1000: 0.0101236105
+2018-12-10 19:20:29,780-INFO-#  Training loss at round 1200: 0.005277855
+2018-12-10 19:20:35,497-INFO-#  Training loss at round 1400: 0.0031987107
+2018-12-10 19:20:41,127-INFO-#  Training loss at round 1600: 0.0021227885
+2018-12-10 19:20:47,413-INFO-#  Training loss at round 1800: 0.0014909104
+2018-12-10 19:20:52,957-INFO-#  Training loss at round 1999: 0.0010982652
+2018-12-10 19:20:53,120-INFO-Accuracy: 1.0
+2018-12-10 19:20:53,715-INFO-#  Training loss at round 0: 4.674931
+2018-12-10 19:21:00,578-INFO-#  Training loss at round 200: 2.2296007
+2018-12-10 19:21:06,466-INFO-#  Training loss at round 400: 2.1505208
+2018-12-10 19:21:13,088-INFO-#  Training loss at round 600: 2.1029541
+2018-12-10 19:21:19,515-INFO-#  Training loss at round 800: 2.089644
+2018-12-10 19:21:25,767-INFO-#  Training loss at round 1000: 2.0872293
+2018-12-10 19:21:31,916-INFO-#  Training loss at round 1200: 2.0912468
+2018-12-10 19:21:37,756-INFO-#  Training loss at round 1400: 2.0862176
+2018-12-10 19:21:43,291-INFO-#  Training loss at round 1600: 2.0972571
+2018-12-10 19:21:50,021-INFO-#  Training loss at round 1800: 2.1045544
+2018-12-10 19:21:56,804-INFO-#  Training loss at round 1999: 2.0697048
+2018-12-10 19:21:56,974-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-8.relu.0.005>                  0.7557027225901398        0.088139079076688         -0.6675636435134518
+ ========  NNClassifier
+2018-12-10 19:21:57,883-INFO-#  Training loss at round 0: 4.6165094
+2018-12-10 19:22:04,693-INFO-#  Training loss at round 200: 3.3126423
+2018-12-10 19:22:10,930-INFO-#  Training loss at round 400: 3.3123763
+2018-12-10 19:22:17,494-INFO-#  Training loss at round 600: 3.3123052
+2018-12-10 19:22:23,739-INFO-#  Training loss at round 800: 3.3122592
+2018-12-10 19:22:29,943-INFO-#  Training loss at round 1000: 3.3122473
+2018-12-10 19:22:35,863-INFO-#  Training loss at round 1200: 3.31224
+2018-12-10 19:22:41,606-INFO-#  Training loss at round 1400: 3.3122344
+2018-12-10 19:22:47,827-INFO-#  Training loss at round 1600: 3.3122225
+2018-12-10 19:22:53,580-INFO-#  Training loss at round 1800: 3.3122106
+2018-12-10 19:22:59,262-INFO-#  Training loss at round 1999: 3.3122096
+2018-12-10 19:22:59,444-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:23:00,180-INFO-#  Training loss at round 0: 4.611912
+2018-12-10 19:23:05,924-INFO-#  Training loss at round 200: 2.7216387
+2018-12-10 19:23:11,694-INFO-#  Training loss at round 400: 2.7215233
+2018-12-10 19:23:17,382-INFO-#  Training loss at round 600: 2.7214935
+2018-12-10 19:23:23,096-INFO-#  Training loss at round 800: 2.7214782
+2018-12-10 19:23:28,766-INFO-#  Training loss at round 1000: 2.721473
+2018-12-10 19:23:36,615-INFO-#  Training loss at round 1200: 2.7214673
+2018-12-10 19:23:43,943-INFO-#  Training loss at round 1400: 2.7214644
+2018-12-10 19:23:49,913-INFO-#  Training loss at round 1600: 2.7214606
+2018-12-10 19:23:56,521-INFO-#  Training loss at round 1800: 2.7214599
+2018-12-10 19:24:03,761-INFO-#  Training loss at round 1999: 2.7214599
+2018-12-10 19:24:04,073-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.relu.0.5>                    0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:24:05,275-INFO-#  Training loss at round 0: 4.616355
+2018-12-10 19:24:11,603-INFO-#  Training loss at round 200: 1.9260044
+2018-12-10 19:24:20,454-INFO-#  Training loss at round 400: 1.2089741
+2018-12-10 19:24:28,158-INFO-#  Training loss at round 600: 1.167997
+2018-12-10 19:24:36,151-INFO-#  Training loss at round 800: 3.095347
+2018-12-10 19:24:43,184-INFO-#  Training loss at round 1000: 3.035007
+2018-12-10 19:24:50,264-INFO-#  Training loss at round 1200: 2.9438937
+2018-12-10 19:24:57,449-INFO-#  Training loss at round 1400: 2.9822307
+2018-12-10 19:25:06,230-INFO-#  Training loss at round 1600: 2.9641278
+2018-12-10 19:25:14,202-INFO-#  Training loss at round 1800: 2.9216619
+2018-12-10 19:25:21,933-INFO-#  Training loss at round 1999: 3.00939
+2018-12-10 19:25:22,130-INFO-Accuracy: 0.14869341185130658
+2018-12-10 19:25:23,065-INFO-#  Training loss at round 0: 4.614916
+2018-12-10 19:25:30,189-INFO-#  Training loss at round 200: 2.1419888
+2018-12-10 19:25:37,173-INFO-#  Training loss at round 400: 2.1666844
+2018-12-10 19:25:45,904-INFO-#  Training loss at round 600: 2.1757095
+2018-12-10 19:25:54,219-INFO-#  Training loss at round 800: 2.1781187
+2018-12-10 19:26:03,052-INFO-#  Training loss at round 1000: 2.4699225
+2018-12-10 19:26:10,288-INFO-#  Training loss at round 1200: 2.4355817
+2018-12-10 19:26:16,898-INFO-#  Training loss at round 1400: 2.4290965
+2018-12-10 19:26:23,362-INFO-#  Training loss at round 1600: 2.4307296
+2018-12-10 19:26:29,839-INFO-#  Training loss at round 1800: 2.430728
+2018-12-10 19:26:36,132-INFO-#  Training loss at round 1999: 2.4307263
+2018-12-10 19:26:36,339-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-8.relu.0.05>                   0.3300494285157931        0.09862473029081603       -0.23142469822497708
+ ========  NNClassifier
+2018-12-10 19:26:37,087-INFO-#  Training loss at round 0: 4.614743
+2018-12-10 19:26:43,604-INFO-#  Training loss at round 200: 1.1664144
+2018-12-10 19:26:50,181-INFO-#  Training loss at round 400: 0.5847048
+2018-12-10 19:26:57,424-INFO-#  Training loss at round 600: 0.41667104
+2018-12-10 19:27:04,867-INFO-#  Training loss at round 800: 0.28198248
+2018-12-10 19:27:11,966-INFO-#  Training loss at round 1000: 0.5497803
+2018-12-10 19:27:18,724-INFO-#  Training loss at round 1200: 0.38557693
+2018-12-10 19:27:25,947-INFO-#  Training loss at round 1400: 0.301746
+2018-12-10 19:27:32,823-INFO-#  Training loss at round 1600: 0.2523911
+2018-12-10 19:27:40,189-INFO-#  Training loss at round 1800: 0.21650392
+2018-12-10 19:27:47,436-INFO-#  Training loss at round 1999: 0.18685065
+2018-12-10 19:27:47,661-INFO-Accuracy: 0.9532572690467427
+2018-12-10 19:27:48,510-INFO-#  Training loss at round 0: 4.616277
+2018-12-10 19:27:55,577-INFO-#  Training loss at round 200: 1.5742635
+2018-12-10 19:28:02,557-INFO-#  Training loss at round 400: 1.2575743
+2018-12-10 19:28:10,969-INFO-#  Training loss at round 600: 1.0169219
+2018-12-10 19:28:20,126-INFO-#  Training loss at round 800: 1.0103626
+2018-12-10 19:28:27,714-INFO-#  Training loss at round 1000: 0.93155414
+2018-12-10 19:28:35,409-INFO-#  Training loss at round 1200: 0.94207186
+2018-12-10 19:28:42,969-INFO-#  Training loss at round 1400: 0.8843798
+2018-12-10 19:28:50,541-INFO-#  Training loss at round 1600: 0.8539954
+2018-12-10 19:28:58,133-INFO-#  Training loss at round 1800: 0.8888719
+2018-12-10 19:29:05,698-INFO-#  Training loss at round 1999: 0.8491362
+2018-12-10 19:29:05,939-INFO-Accuracy: 0.7619573215599705
+Score / NNSARSClassifier<E5-8.relu.0.005>                  0.8576072953033567        0.06770712730977632       -0.7899001679935803
+ ========  NNClassifier
+2018-12-10 19:29:06,826-INFO-#  Training loss at round 0: 4.6215954
+2018-12-10 19:29:14,654-INFO-#  Training loss at round 200: 3.3126245
+2018-12-10 19:29:22,476-INFO-#  Training loss at round 400: 3.312367
+2018-12-10 19:29:30,064-INFO-#  Training loss at round 600: 3.312293
+2018-12-10 19:29:37,774-INFO-#  Training loss at round 800: 3.3122625
+^[2018-12-10 19:29:45,707-INFO-#  Training loss at round 1000: 3.3122265
+2018-12-10 19:29:54,169-INFO-#  Training loss at round 1200: 3.3122294
+2018-12-10 19:30:01,860-INFO-#  Training loss at round 1400: 3.3122091
+2018-12-10 19:30:09,871-INFO-#  Training loss at round 1600: 3.3122106
+2018-12-10 19:30:19,663-INFO-#  Training loss at round 1800: 3.3122158
+2018-12-10 19:30:28,503-INFO-#  Training loss at round 1999: 3.3122084
+2018-12-10 19:30:28,766-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:30:29,979-INFO-#  Training loss at round 0: 4.627936
+2018-12-10 19:30:40,414-INFO-#  Training loss at round 200: 2.7216597
+2018-12-10 19:30:52,443-INFO-#  Training loss at round 400: 2.7215247
+2018-12-10 19:31:13,778-INFO-#  Training loss at round 600: 2.7214963
+2018-12-10 19:31:34,591-INFO-#  Training loss at round 800: 2.7214806
+2018-12-10 19:31:56,354-INFO-#  Training loss at round 1000: 2.721473
+2018-12-10 19:32:15,714-INFO-#  Training loss at round 1200: 2.721468
+2018-12-10 19:32:37,349-INFO-#  Training loss at round 1400: 2.7214649
+2018-12-10 19:33:00,046-INFO-#  Training loss at round 1600: 2.7214603
+2018-12-10 19:33:25,229-INFO-#  Training loss at round 1800: 2.7214599
+
+2018-12-10 19:33:49,288-INFO-#  Training loss at round 1999: 2.7214541
+2018-12-10 19:33:49,902-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-16.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:33:52,272-INFO-#  Training loss at round 0: 4.621704
+2018-12-10 19:34:08,818-INFO-#  Training loss at round 200: 1.8674856
+2018-12-10 19:34:24,520-INFO-#  Training loss at round 400: 1.8763176
+2018-12-10 19:34:41,650-INFO-#  Training loss at round 600: 1.5517019
+2018-12-10 19:34:57,654-INFO-#  Training loss at round 800: 1.9242451
+2018-12-10 19:35:13,125-INFO-#  Training loss at round 1000: 1.5386467
+2018-12-10 19:35:28,669-INFO-#  Training loss at round 1200: 3.416316
+2018-12-10 19:35:44,918-INFO-#  Training loss at round 1400: 1.6751003
+2018-12-10 19:36:00,307-INFO-#  Training loss at round 1600: 1.4424174
+2018-12-10 19:36:18,051-INFO-#  Training loss at round 1800: 2.2076557
+2018-12-10 19:36:37,769-INFO-#  Training loss at round 1999: 1.2235024
+2018-12-10 19:36:38,396-INFO-Accuracy: 0.631947000368053
+2018-12-10 19:36:40,099-INFO-#  Training loss at round 0: 4.5698233
+2018-12-10 19:36:57,676-INFO-#  Training loss at round 200: 2.1744587
+2018-12-10 19:37:08,823-INFO-#  Training loss at round 400: 2.2284608
+2018-12-10 19:37:18,858-INFO-#  Training loss at round 600: 2.2186499
+2018-12-10 19:37:28,728-INFO-#  Training loss at round 800: 2.2074332
+2018-12-10 19:37:39,540-INFO-#  Training loss at round 1000: 2.2101638
+2018-12-10 19:37:51,860-INFO-#  Training loss at round 1200: 2.7156117
+2018-12-10 19:38:05,545-INFO-#  Training loss at round 1400: 2.7151635
+2018-12-10 19:38:16,781-INFO-#  Training loss at round 1600: 2.71511
+2018-12-10 19:38:27,195-INFO-#  Training loss at round 1800: 2.7150917
+2018-12-10 19:38:42,330-INFO-#  Training loss at round 1999: 2.715079
+2018-12-10 19:38:42,642-INFO-Accuracy: 0.5125091979396615
+Score / NNSARSClassifier<E3-16.relu.0.05>                  0.5722280991538573        0.12069965006528269       -0.4515284490885746
+ ========  NNClassifier
+2018-12-10 19:38:44,001-INFO-#  Training loss at round 0: 4.61899
+2018-12-10 19:38:59,687-INFO-#  Training loss at round 200: 0.0178408
+2018-12-10 19:39:14,086-INFO-#  Training loss at round 400: 0.0019610545
+2018-12-10 19:39:24,448-INFO-#  Training loss at round 600: 0.00077558984
+2018-12-10 19:39:33,773-INFO-#  Training loss at round 800: 0.00041643166
+2018-12-10 19:39:42,308-INFO-#  Training loss at round 1000: 0.0002589074
+2018-12-10 19:39:50,937-INFO-#  Training loss at round 1200: 0.00017550113
+2018-12-10 19:40:02,148-INFO-#  Training loss at round 1400: 0.00012621404
+2018-12-10 19:40:11,729-INFO-#  Training loss at round 1600: 9.4541065e-05
+2018-12-10 19:40:31,423-INFO-#  Training loss at round 1800: 7.286924e-05
+2018-12-10 19:40:48,622-INFO-#  Training loss at round 1999: 5.753969e-05
+2018-12-10 19:40:49,019-INFO-Accuracy: 1.0
+2018-12-10 19:40:50,623-INFO-#  Training loss at round 0: 4.6032295
+2018-12-10 19:41:00,639-INFO-#  Training loss at round 200: 0.010946875
+2018-12-10 19:41:12,554-INFO-#  Training loss at round 400: 0.0013949127
+2018-12-10 19:41:31,967-INFO-#  Training loss at round 600: 0.0005528467
+2018-12-10 19:41:48,175-INFO-#  Training loss at round 800: 0.0002984708
+2018-12-10 19:41:59,545-INFO-#  Training loss at round 1000: 0.00018507813
+2018-12-10 19:42:09,058-INFO-#  Training loss at round 1200: 0.00012548822
+2018-12-10 19:42:19,197-INFO-#  Training loss at round 1400: 9.000256e-05
+2018-12-10 19:42:31,446-INFO-#  Training loss at round 1600: 6.726579e-05
+2018-12-10 19:42:44,395-INFO-#  Training loss at round 1800: 5.18118e-05
+2018-12-10 19:42:56,306-INFO-#  Training loss at round 1999: 4.084389e-05
+2018-12-10 19:42:56,546-INFO-Accuracy: 1.0
+Score / NNSARSClassifier<E3-16.relu.0.005>                 1.0                       0.07194061699115725       -0.9280593830088427
+ ========  NNClassifier
+2018-12-10 19:42:57,467-INFO-#  Training loss at round 0: 4.6129084
+2018-12-10 19:43:08,812-INFO-#  Training loss at round 200: 3.3126163
+2018-12-10 19:43:20,569-INFO-#  Training loss at round 400: 3.3123617
+2018-12-10 19:43:30,767-INFO-#  Training loss at round 600: 3.3122807
+2018-12-10 19:43:41,867-INFO-#  Training loss at round 800: 3.3122513
+2018-12-10 19:43:52,306-INFO-#  Training loss at round 1000: 3.312243
+2018-12-10 19:44:02,279-INFO-#  Training loss at round 1200: 3.3122354
+2018-12-10 19:44:12,753-INFO-#  Training loss at round 1400: 3.312226
+2018-12-10 19:44:22,943-INFO-#  Training loss at round 1600: 3.3122275
+2018-12-10 19:44:31,966-INFO-#  Training loss at round 1800: 3.3122187
+2018-12-10 19:44:43,329-INFO-#  Training loss at round 1999: 3.3122113
+2018-12-10 19:44:43,577-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:44:44,475-INFO-#  Training loss at round 0: 4.6172776
+2018-12-10 19:44:55,608-INFO-#  Training loss at round 200: 2.7216973
+2018-12-10 19:45:04,352-INFO-#  Training loss at round 400: 2.7215312
+2018-12-10 19:45:12,749-INFO-#  Training loss at round 600: 2.7215014
+2018-12-10 19:45:21,150-INFO-#  Training loss at round 800: 2.7214806
+2018-12-10 19:45:29,292-INFO-#  Training loss at round 1000: 2.721472
+2018-12-10 19:45:37,542-INFO-#  Training loss at round 1200: 2.7214694
+2018-12-10 19:45:45,610-INFO-#  Training loss at round 1400: 2.721465
+2018-12-10 19:45:53,704-INFO-#  Training loss at round 1600: 2.7214615
+2018-12-10 19:46:01,898-INFO-#  Training loss at round 1800: 2.72146
+2018-12-10 19:46:10,584-INFO-#  Training loss at round 1999: 2.7214587
+2018-12-10 19:46:10,790-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:46:11,655-INFO-#  Training loss at round 0: 4.609707
+2018-12-10 19:46:19,835-INFO-#  Training loss at round 200: 2.4864266
+2018-12-10 19:46:28,794-INFO-#  Training loss at round 400: 2.1958482
+2018-12-10 19:46:37,026-INFO-#  Training loss at round 600: 2.0615325
+2018-12-10 19:46:45,586-INFO-#  Training loss at round 800: 1.9916372
+2018-12-10 19:46:53,968-INFO-#  Training loss at round 1000: 1.8799345
+2018-12-10 19:47:02,961-INFO-#  Training loss at round 1200: 1.9581927
+2018-12-10 19:47:12,389-INFO-#  Training loss at round 1400: 1.6713938
+2018-12-10 19:47:21,842-INFO-#  Training loss at round 1600: 1.9317143
+2018-12-10 19:47:30,973-INFO-#  Training loss at round 1800: 1.9195735
+2018-12-10 19:47:39,815-INFO-#  Training loss at round 1999: 1.6147776
+2018-12-10 19:47:40,048-INFO-Accuracy: 0.5097534044902466
+2018-12-10 19:47:41,092-INFO-#  Training loss at round 0: 4.6276107
+2018-12-10 19:47:50,151-INFO-#  Training loss at round 200: 2.45691
+2018-12-10 19:47:58,732-INFO-#  Training loss at round 400: 2.4509404
+2018-12-10 19:48:08,033-INFO-#  Training loss at round 600: 2.4508982
+2018-12-10 19:48:17,711-INFO-#  Training loss at round 800: 2.4508772
+2018-12-10 19:48:26,976-INFO-#  Training loss at round 1000: 2.4508696
+2018-12-10 19:48:35,907-INFO-#  Training loss at round 1200: 2.4508698
+2018-12-10 19:48:44,761-INFO-#  Training loss at round 1400: 2.4508696
+2018-12-10 19:48:54,475-INFO-#  Training loss at round 1600: 2.4366226
+2018-12-10 19:49:03,092-INFO-#  Training loss at round 1800: 2.4246094
+2018-12-10 19:49:11,903-INFO-#  Training loss at round 1999: 2.424592
+2018-12-10 19:49:12,132-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-16.relu.0.05>                  0.5105794248352631        0.1394635823879463        -0.37111584244731677
+ ========  NNClassifier
+2018-12-10 19:49:13,092-INFO-#  Training loss at round 0: 4.612183
+2018-12-10 19:49:22,756-INFO-#  Training loss at round 200: 0.080226004
+2018-12-10 19:49:31,443-INFO-#  Training loss at round 400: 0.0036813032
+2018-12-10 19:49:40,155-INFO-#  Training loss at round 600: 0.0010565459
+2018-12-10 19:49:48,985-INFO-#  Training loss at round 800: 0.0005242771
+2018-12-10 19:49:57,762-INFO-#  Training loss at round 1000: 0.0003128093
+2018-12-10 19:50:06,236-INFO-#  Training loss at round 1200: 0.00020675076
+2018-12-10 19:50:13,767-INFO-#  Training loss at round 1400: 0.00014567256
+2018-12-10 19:50:21,888-INFO-#  Training loss at round 1600: 0.00010721501
+2018-12-10 19:50:29,813-INFO-#  Training loss at round 1800: 8.162945e-05
+2018-12-10 19:50:38,796-INFO-#  Training loss at round 1999: 6.375295e-05
+2018-12-10 19:50:39,024-INFO-Accuracy: 1.0
+2018-12-10 19:50:39,936-INFO-#  Training loss at round 0: 4.6203833
+2018-12-10 19:50:47,660-INFO-#  Training loss at round 200: 0.7427642
+2018-12-10 19:50:55,581-INFO-#  Training loss at round 400: 0.7544891
+2018-12-10 19:51:03,940-INFO-#  Training loss at round 600: 0.27384478
+2018-12-10 19:51:11,791-INFO-#  Training loss at round 800: 0.19753192
+2018-12-10 19:51:19,615-INFO-#  Training loss at round 1000: 1.5214784
+2018-12-10 19:51:27,590-INFO-#  Training loss at round 1200: 1.3677841
+2018-12-10 19:51:35,446-INFO-#  Training loss at round 1400: 1.2686415
+2018-12-10 19:51:43,513-INFO-#  Training loss at round 1600: 1.1848514
+2018-12-10 19:51:50,957-INFO-#  Training loss at round 1800: 1.1316011
+2018-12-10 19:51:58,165-INFO-#  Training loss at round 1999: 1.1431321
+2018-12-10 19:51:58,363-INFO-Accuracy: 0.7178072111846946
+Score / NNSARSClassifier<E5-16.relu.0.005>                 0.8589036055923474        0.06384670091536596       -0.7950569046769814
+ ========  NNClassifier
+2018-12-10 19:51:59,092-INFO-#  Training loss at round 0: 4.631461
+2018-12-10 19:52:06,377-INFO-#  Training loss at round 200: 3.3122358
+2018-12-10 19:52:12,969-INFO-#  Training loss at round 400: 3.3122175
+2018-12-10 19:52:19,730-INFO-#  Training loss at round 600: 3.3121927
+2018-12-10 19:52:26,771-INFO-#  Training loss at round 800: 3.3121977
+^[2018-12-10 19:52:33,720-INFO-#  Training loss at round 1000: 3.3122146
+2018-12-10 19:52:40,760-INFO-#  Training loss at round 1200: 3.3122175
+2018-12-10 19:52:48,410-INFO-#  Training loss at round 1400: 3.3122084
+2018-12-10 19:52:55,815-INFO-#  Training loss at round 1600: 3.3137646
+2018-12-10 19:53:03,464-INFO-#  Training loss at round 1800: 3.3122835
+2018-12-10 19:53:10,528-INFO-#  Training loss at round 1999: 3.312247
+2018-12-10 19:53:10,715-INFO-Accuracy: 0.12403386087596614
+2018-12-10 19:53:11,397-INFO-#  Training loss at round 0: 4.597873
+2018-12-10 19:53:18,572-INFO-#  Training loss at round 200: 2.7216594
+2018-12-10 19:53:25,185-INFO-#  Training loss at round 400: 2.7215261
+2018-12-10 19:53:32,199-INFO-#  Training loss at round 600: 2.7214947
+2018-12-10 19:53:39,435-INFO-#  Training loss at round 800: 2.721479
+2018-12-10 19:53:46,767-INFO-#  Training loss at round 1000: 2.7214723
+2018-12-10 19:53:53,947-INFO-#  Training loss at round 1200: 2.7214682
+2018-12-10 19:54:01,600-INFO-#  Training loss at round 1400: 2.7214634
+2018-12-10 19:54:09,050-INFO-#  Training loss at round 1600: 2.7214599
+2018-12-10 19:54:16,219-INFO-#  Training loss at round 1800: 2.7214608
+2018-12-10 19:54:23,559-INFO-#  Training loss at round 1999: 2.7214553
+2018-12-10 19:54:23,734-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E3-32.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 19:54:24,428-INFO-#  Training loss at round 0: 4.611831
+2018-12-10 19:54:31,636-INFO-#  Training loss at round 200: 1.0511024
+2018-12-10 19:54:38,851-INFO-#  Training loss at round 400: 2.1054647
+2018-12-10 19:54:45,770-INFO-#  Training loss at round 600: 2.8821807
+2018-12-10 19:54:53,657-INFO-#  Training loss at round 800: 2.8252754
+2018-12-10 19:55:00,469-INFO-#  Training loss at round 1000: 2.8213193
+2018-12-10 19:55:07,304-INFO-#  Training loss at round 1200: 2.8227847
+2018-12-10 19:55:14,855-INFO-#  Training loss at round 1400: 3.026254
+2018-12-10 19:55:21,759-INFO-#  Training loss at round 1600: 3.0189648
+2018-12-10 19:55:28,784-INFO-#  Training loss at round 1800: 3.018333
+2018-12-10 19:55:35,646-INFO-#  Training loss at round 1999: 3.0231874
+2018-12-10 19:55:35,851-INFO-Accuracy: 0.21273463378726537
+2018-12-10 19:55:36,430-INFO-#  Training loss at round 0: 4.593177
+2018-12-10 19:55:43,175-INFO-#  Training loss at round 200: 2.2414987
+2018-12-10 19:55:50,359-INFO-#  Training loss at round 400: 2.1255326
+2018-12-10 19:55:57,269-INFO-#  Training loss at round 600: 2.1112506
+2018-12-10 19:56:04,030-INFO-#  Training loss at round 800: 2.1603825
+2018-12-10 19:56:10,803-INFO-#  Training loss at round 1000: 2.1494093
+2018-12-10 19:56:17,527-INFO-#  Training loss at round 1200: 2.1376946
+2018-12-10 19:56:24,221-INFO-#  Training loss at round 1400: 2.143421
+2018-12-10 19:56:30,850-INFO-#  Training loss at round 1600: 2.2796261
+2018-12-10 19:56:37,575-INFO-#  Training loss at round 1800: 2.2606215
+2018-12-10 19:56:44,267-INFO-#  Training loss at round 1999: 2.2508063
+2018-12-10 19:56:44,435-INFO-Accuracy: 0.5143487858719646
+Score / NNSARSClassifier<E3-32.relu.0.05>                  0.363541709829615         0.2978514939999778        -0.06569021582963719
+ ========  NNClassifier
+2018-12-10 19:56:45,106-INFO-#  Training loss at round 0: 4.6056323
+2018-12-10 19:56:51,860-INFO-#  Training loss at round 200: 0.0009293669
+2018-12-10 19:56:58,687-INFO-#  Training loss at round 400: 0.00022928404
+2018-12-10 19:57:05,412-INFO-#  Training loss at round 600: 0.00010111811
+2018-12-10 19:57:12,322-INFO-#  Training loss at round 800: 5.660104e-05
+2018-12-10 19:57:19,163-INFO-#  Training loss at round 1000: 3.58143e-05
+2018-12-10 19:57:25,858-INFO-#  Training loss at round 1200: 2.4452638e-05
+2018-12-10 19:57:32,890-INFO-#  Training loss at round 1400: 1.7582637e-05
+2018-12-10 19:57:40,288-INFO-#  Training loss at round 1600: 1.3137921e-05
+2018-12-10 19:57:47,257-INFO-#  Training loss at round 1800: 1.00944635e-05
+2018-12-10 19:57:53,712-INFO-#  Training loss at round 1999: 7.9341735e-06
+2018-12-10 19:57:53,873-INFO-Accuracy: 1.0
+2018-12-10 19:57:54,423-INFO-#  Training loss at round 0: 4.658895
+2018-12-10 19:58:00,921-INFO-#  Training loss at round 200: 0.0075000254
+2018-12-10 19:58:07,480-INFO-#  Training loss at round 400: 0.00091204507
+2018-12-10 19:58:14,086-INFO-#  Training loss at round 600: 0.0003657488
+2018-12-10 19:58:20,580-INFO-#  Training loss at round 800: 0.00019804187
+2018-12-10 19:58:27,079-INFO-#  Training loss at round 1000: 0.00012389281
+2018-12-10 19:58:33,581-INFO-#  Training loss at round 1200: 8.438288e-05
+2018-12-10 19:58:40,169-INFO-#  Training loss at round 1400: 6.0595594e-05
+2018-12-10 19:58:46,710-INFO-#  Training loss at round 1600: 4.5251287e-05
+2018-12-10 19:58:53,426-INFO-#  Training loss at round 1800: 3.483256e-05
+2018-12-10 19:58:59,860-INFO-#  Training loss at round 1999: 2.7499753e-05
+2018-12-10 19:59:00,027-INFO-Accuracy: 1.0
+Score / NNSARSClassifier<E3-32.relu.0.005>                 1.0                       0.07893064489439533       -0.9210693551056046
+ ========  NNClassifier
+2018-12-10 19:59:00,751-INFO-#  Training loss at round 0: 4.6149096
+2018-12-10 19:59:08,775-INFO-#  Training loss at round 200: 3.3126442
+2018-12-10 19:59:16,681-INFO-#  Training loss at round 400: 3.3123631
+2018-12-10 19:59:24,589-INFO-#  Training loss at round 600: 3.3122904
+2018-12-10 19:59:32,517-INFO-#  Training loss at round 800: 3.3122473
+2018-12-10 19:59:40,470-INFO-#  Training loss at round 1000: 3.312243
+2018-12-10 19:59:48,362-INFO-#  Training loss at round 1200: 3.3122358
+2018-12-10 19:59:56,301-INFO-#  Training loss at round 1400: 3.3122275
+2018-12-10 20:00:04,259-INFO-#  Training loss at round 1600: 3.312223
+2018-12-10 20:00:12,348-INFO-#  Training loss at round 1800: 3.3122203
+2018-12-10 20:00:20,467-INFO-#  Training loss at round 1999: 3.3122258
+2018-12-10 20:00:20,657-INFO-Accuracy: 0.12403386087596614
+2018-12-10 20:00:21,545-INFO-#  Training loss at round 0: 4.6220636
+2018-12-10 20:00:29,740-INFO-#  Training loss at round 200: 2.721662
+2018-12-10 20:00:38,162-INFO-#  Training loss at round 400: 2.721523
+2018-12-10 20:00:46,676-INFO-#  Training loss at round 600: 2.7214956
+2018-12-10 20:00:54,870-INFO-#  Training loss at round 800: 2.7214797
+2018-12-10 20:01:03,528-INFO-#  Training loss at round 1000: 2.7214737
+2018-12-10 20:01:12,866-INFO-#  Training loss at round 1200: 2.7214699
+2018-12-10 20:01:21,787-INFO-#  Training loss at round 1400: 2.721464
+2018-12-10 20:01:30,380-INFO-#  Training loss at round 1600: 2.72146
+2018-12-10 20:01:38,676-INFO-#  Training loss at round 1800: 2.7214599
+2018-12-10 20:01:47,739-INFO-#  Training loss at round 1999: 2.7214572
+2018-12-10 20:01:47,945-INFO-Accuracy: 0.5114054451802796
+Score / NNSARSClassifier<E5-32.relu.0.5>                   0.3177196530281229        0.3177196530281229        0.0
+ ========  NNClassifier
+2018-12-10 20:01:48,742-INFO-#  Training loss at round 0: 4.608621
+2018-12-10 20:01:57,604-INFO-#  Training loss at round 200: 2.5791476
+2018-12-10 20:02:06,762-INFO-#  Training loss at round 400: 2.310886
+2018-12-10 20:02:15,701-INFO-#  Training loss at round 600: 2.1342523
+2018-12-10 20:02:25,242-INFO-#  Training loss at round 800: 2.033126
+2018-12-10 20:02:34,563-INFO-#  Training loss at round 1000: 2.157512
+2018-12-10 20:02:43,463-INFO-#  Training loss at round 1200: 1.7873667
+2018-12-10 20:02:52,297-INFO-#  Training loss at round 1400: 1.6583872
+2018-12-10 20:03:01,117-INFO-#  Training loss at round 1600: 1.7418759
+2018-12-10 20:03:09,870-INFO-#  Training loss at round 1800: 1.6542993
+2018-12-10 20:03:18,592-INFO-#  Training loss at round 1999: 1.9002445
+2018-12-10 20:03:18,779-INFO-Accuracy: 0.28487302171512696
+2018-12-10 20:03:19,552-INFO-#  Training loss at round 0: 4.596347
+2018-12-10 20:03:28,158-INFO-#  Training loss at round 200: 2.2686524
+2018-12-10 20:03:37,017-INFO-#  Training loss at round 400: 2.2606258
+2018-12-10 20:03:45,389-INFO-#  Training loss at round 600: 2.7069309
+2018-12-10 20:03:53,409-INFO-#  Training loss at round 800: 2.7047915
+2018-12-10 20:04:02,063-INFO-#  Training loss at round 1000: 2.702597
+2018-12-10 20:04:11,159-INFO-#  Training loss at round 1200: 2.7188632
+2018-12-10 20:04:19,885-INFO-#  Training loss at round 1400: 2.7154195
+2018-12-10 20:04:28,484-INFO-#  Training loss at round 1600: 2.71411
+2018-12-10 20:04:37,885-INFO-#  Training loss at round 1800: 2.7138383
+2018-12-10 20:04:46,251-INFO-#  Training loss at round 1999: 2.7131732
+2018-12-10 20:04:46,458-INFO-Accuracy: 0.5128771155261221
+Score / NNSARSClassifier<E5-32.relu.0.05>                  0.39887506862062455       0.14682193411715894       -0.2520531345034656
+ ========  NNClassifier
+2018-12-10 20:04:47,234-INFO-#  Training loss at round 0: 4.618003
+2018-12-10 20:04:55,718-INFO-#  Training loss at round 200: 0.008371657
+2018-12-10 20:05:04,660-INFO-#  Training loss at round 400: 0.00089896563
+2018-12-10 20:05:14,561-INFO-#  Training loss at round 600: 0.0003211413
+2018-12-10 20:05:24,291-INFO-#  Training loss at round 800: 0.00016187319
+2018-12-10 20:05:33,555-INFO-#  Training loss at round 1000: 9.7083175e-05
+2018-12-10 20:05:42,177-INFO-#  Training loss at round 1200: 6.408276e-05
+2018-12-10 20:05:50,060-INFO-#  Training loss at round 1400: 4.5221255e-05
+2018-12-10 20:05:58,539-INFO-#  Training loss at round 1600: 3.3358996e-05
+2018-12-10 20:06:07,321-INFO-#  Training loss at round 1800: 2.5362355e-05
+2018-12-10 20:06:16,028-INFO-#  Training loss at round 1999: 1.981969e-05
+2018-12-10 20:06:16,239-INFO-Accuracy: 1.0
+2018-12-10 20:06:17,115-INFO-#  Training loss at round 0: 4.6082973
+2018-12-10 20:06:26,197-INFO-#  Training loss at round 200: 0.025275255
+2018-12-10 20:06:35,049-INFO-#  Training loss at round 400: 0.0010236388
+2018-12-10 20:06:43,824-INFO-#  Training loss at round 600: 0.00024313015
+2018-12-10 20:06:53,129-INFO-#  Training loss at round 800: 0.00011556088
+2018-12-10 20:07:02,016-INFO-#  Training loss at round 1000: 6.816019e-05
+2018-12-10 20:07:10,746-INFO-#  Training loss at round 1200: 4.4929424e-05
+2018-12-10 20:07:19,767-INFO-#  Training loss at round 1400: 3.1045853e-05
+2018-12-10 20:07:28,746-INFO-#  Training loss at round 1600: 2.2870374e-05
+2018-12-10 20:07:37,647-INFO-#  Training loss at round 1800: 1.740768e-05
+2018-12-10 20:07:46,402-INFO-#  Training loss at round 1999: 1.3492072e-05
+2018-12-10 20:07:46,598-INFO-Accuracy: 1.0
+Score / NNSARSClassifier<E5-32.relu.0.005>                 1.0                       0.059614362245941195      -0.9403856377540588
