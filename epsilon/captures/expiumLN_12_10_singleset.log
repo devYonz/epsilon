@@ -1,0 +1,40 @@
+(epsilon)$ python src/run.py [LN: one set]
+2018-12-10 16:31:40,162-DEBUG-Working with file batch: /mar_18_data.json
+2018-12-10 16:31:40,293-DEBUG-Processing ticket #0
+2018-12-10 16:31:46,120-DEBUG-Processing ticket #100
+2018-12-10 16:32:04,600-DEBUG-Processing ticket #200
+2018-12-10 16:32:36,526-DEBUG-Processing ticket #300
+2018-12-10 16:33:19,914-DEBUG-Processing ticket #400
+2018-12-10 16:34:17,973-DEBUG-Processing ticket #500
+2018-12-10 16:34:58,217-DEBUG-	 Ticket count:559  Duplicates:559 or 0.0%
+ ========  NNClassifier
+2018-12-10 16:34:59.338015: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+2018-12-10 16:34:59.345398: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2018-12-10 16:34:59,793-INFO-#  Training loss at round 0: 9.9976635
+2018-12-10 16:37:50,722-INFO-#  Training loss at round 1000: 0.018796002
+2018-12-10 16:40:41,031-INFO-#  Training loss at round 2000: 0.0020001684
+2018-12-10 16:43:33,475-INFO-#  Training loss at round 2999: 0.0006069443
+2018-12-10 16:43:33,864-INFO-Accuracy: 1.0
+2018-12-10 16:43:35,074-INFO-#  Training loss at round 0: 10.002632
+2018-12-10 16:46:43,601-INFO-#  Training loss at round 1000: 0.06573268
+2018-12-10 16:49:57,877-INFO-#  Training loss at round 2000: 0.0068440363
+2018-12-10 16:53:06,951-INFO-#  Training loss at round 2999: 0.0019484649
+2018-12-10 16:53:07,257-INFO-Accuracy: 1.0
+2018-12-10 16:53:08,421-INFO-#  Training loss at round 0: 9.998423
+2018-12-10 16:55:59,768-INFO-#  Training loss at round 1000: 0.6021161
+2018-12-10 16:58:59,282-INFO-#  Training loss at round 2000: 0.29675448
+2018-12-10 17:01:51,661-INFO-#  Training loss at round 2999: 0.12835455
+2018-12-10 17:01:51,947-INFO-Accuracy: 0.9821029082774049
+2018-12-10 17:01:53,151-INFO-#  Training loss at round 0: 10.00642
+2018-12-10 17:04:51,820-INFO-#  Training loss at round 1000: 0.0920966
+2018-12-10 17:07:52,497-INFO-#  Training loss at round 2000: 0.010517134
+2018-12-10 17:10:42,917-INFO-#  Training loss at round 2999: 0.0029121083
+2018-12-10 17:10:43,201-INFO-Accuracy: 1.0
+2018-12-10 17:10:44,432-INFO-#  Training loss at round 0: 10.002701
+2018-12-10 17:13:36,859-INFO-#  Training loss at round 1000: 0.011659221
+2018-12-10 17:16:31,109-INFO-#  Training loss at round 2000: 0.0014129325
+2018-12-10 17:19:23,653-INFO-#  Training loss at round 2999: 0.00044098304
+2018-12-10 17:19:23,948-INFO-Accuracy: 1.0
+Score / NNSARSClassifier<E3-16.relu.0.005>                 0.996420581655481         0.058976833976833974      -0.937443747678647
+
+Process finished with exit code 0

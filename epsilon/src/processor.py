@@ -1,11 +1,11 @@
 import numpy as np
 
 
-def get_text_body(issue: dict)-> str:
+def get_text_body(issue: dict, stopwords: set)-> str:
     """ Take a JIRA ticket issue and convert it to a single line text
 
     :param dict issue: JIRA object with many keys
-    :return str: one line string representation concatenating text form the issues
+    :return set stopwords: words that should be dropped
     """
     text_body = issue.get('summary')
     if issue.get('description'):
@@ -35,6 +35,9 @@ def get_text_body(issue: dict)-> str:
     text_body = text_body.replace('\n', ' ')
     text_body = text_body.replace('\r', ' ')
     text_body = text_body.replace('&nbsp', ' ')
+
+    for stopword in stopwords:
+        text_body.replace(stopword, '')
 
     return text_body
 

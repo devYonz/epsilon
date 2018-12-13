@@ -1,4 +1,4 @@
-(epsilon)$ python src/run.py
+(epsilon)$ python src/run.py [Expium]
 Data set file recieved: ./datasets/Jumble-for-JIRA.json
  ========  NNClassifier
 2018-12-09 16:03:42.657233: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
@@ -8,10 +8,6 @@ s for best performance.
 2018-12-09 16:03:42,966 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6302485
 2018-12-09 16:04:13,332 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3123994
 2018-12-09 16:04:43,567 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3121963
-2018-12-09 16:04:43,737 - MainThread - font_manager - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu S
-ans ('/home/yaberraf/miniconda3/envs/epsilon/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
-2018-12-09 16:04:43,790 - MainThread - font_manager - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu S
-ans ('/home/yaberraf/miniconda3/envs/epsilon/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
 2018-12-09 16:04:43,884 - MainThread - classifiers - INFO - Accuracy: 0.12403386087596614
 2018-12-09 16:04:44,530 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.674922
 2018-12-09 16:05:11,501 - MainThread - classifiers - INFO - #  Training loss at round 1000: 2.735494
