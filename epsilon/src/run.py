@@ -336,7 +336,7 @@ def production(data, directory, prefix, rounds):
         [log.debug(f'File found: {fname}') for fname in json_files]
 
     master_list = []
-    for batch in json_files[0:10]:
+    for batch in json_files:
         with open(batch) as f:
             log.debug(f'Working with file batch: {batch}')
             dataset = json.load(f)
