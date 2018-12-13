@@ -347,12 +347,12 @@ def production(data, directory, prefix, rounds):
     # neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
 
     # SVM Linear Kernel Classifier
-    # svm_classifier = SVMClassifier()
-    # run_classifier(svm_classifier, train_matrix, train_labels)
-    #
-    # # Naieve Bayes Classifier
-    # nb_classifier = NBClassifier()
-    # run_classifier(nb_classifier, train_matrix, train_labels)
+    svm_classifier = SVMClassifier()
+    run_classifier(svm_classifier, train_matrix, train_labels)
+
+    # Naieve Bayes Classifier
+    nb_classifier = NBClassifier()
+    run_classifier(nb_classifier, train_matrix, train_labels)
 
     # DNN Classifier
     dnn_classifier = production_neural_classifer(rounds, prefix)

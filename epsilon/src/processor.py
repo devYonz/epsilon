@@ -14,10 +14,22 @@ def get_text_body(issue: dict)-> str:
     # Capture comment bodies
     for comment in issue.get('comments'):
         if isinstance(comment, dict):
+            # Skip JIRA created comments
+            if comment.get('author') and 'jira' in comment.get('author').get('name'):
+                continue
             text_body += ' ' + comment.get('body')
-        elif isinstance(comment, list):
+            # Capture comment author email
+            if comment.get('author') and comment.get('author').get('emailAddress'):
+                text_body += ' ' + comment.get('updateAuthor').get('emailAddress')
+
+            # Capture comment updating person email:
+            if comment.get('updateAuthor') and comment.get('updateAuthor').get('emailAddress'):
+                text_body += ' ' + comment.get('updateAuthor').get('emailAddress')
+
+        elif isinstance(comment, list) and len(comment) == 3:
             for comment_line in comment:
-                text_body += ' ' + comment_line
+                if 'ejira' not in comment_line:
+                    text_body += ' ' + comment_line
         else:
             text_body += ' ' + comment
     text_body = text_body.replace('\n', ' ')
