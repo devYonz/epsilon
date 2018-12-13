@@ -15,6 +15,9 @@ def get_text_body(issue: dict)-> str:
     for comment in issue.get('comments'):
         if isinstance(comment, dict):
             text_body += ' ' + comment.get('body')
+        elif isinstance(comment, list):
+            for comment_line in comment:
+                text_body += ' ' + comment_line
         else:
             text_body += ' ' + comment
     text_body = text_body.replace('\n', ' ')

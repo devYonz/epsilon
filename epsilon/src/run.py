@@ -104,28 +104,28 @@ def vectorize_json(tickets, directory):
             ISSUES_DEDUP[issue.get('key')] = True
 
         words = get_text_body(issue)
-        # for stopword in stopwords:
-        #     words.replace(stopword, '')
+        for stopword in stopwords:
+            words.replace(stopword, '')
         issues_lines.append(words)
         assignee = issue.get(ASSIGNEE_KEY)
         assignees.append(assignee)
 
-        # Construct the words into vector of >5 occurance
-        dictionary = create_dictionary(issues_lines)
-        train_matrix = transform_text(issues_lines, dictionary)
+    # Construct the words into vector of >5 occurrence
+    dictionary = create_dictionary(issues_lines)
+    train_matrix = transform_text(issues_lines, dictionary)
 
-        # Setup class Label ENUMS: Y label assignees -> int class number
-        for class_name in list(set(assignees)):
-            issue_features.set_target_id(class_name)
-            assignee_count += 1
-        assignee_vector = []
-        for assignee in assignees:
-            assignee_vector.append(issue_features.get_target_id(assignee))
+    # Setup class Label ENUMS: Y label assignees -> int class number
+    for class_name in list(set(assignees)):
+        issue_features.set_target_id(class_name)
+        assignee_count += 1
+    assignee_vector = []
+    for assignee in assignees:
+        assignee_vector.append(issue_features.get_target_id(assignee))
 
-        # Build the train feature vector
-        issue_features.data = train_matrix
-        issue_features.target = assignee_vector
-        train_labels = issue_features.target
+    # Build the train feature vector
+    issue_features.data = train_matrix
+    issue_features.target = assignee_vector
+    train_labels = issue_features.target
 
     duplicates = len(tickets) - count
     dup_percent = 100 * duplicates / len(tickets)
@@ -163,14 +163,14 @@ def production_neural_classifer(rounds=200, prefix='E'):
     return NNClassifier(tf_apply_fn, name, rounds, learning_rate)
 
 
-def run_classifier(classifier, train_matrix, train_labels):
+def run_classifier(classifier, train_matrix, train_labels, folds=5):
     print(" ======== ", classifier.__class__.__name__)
     if type(classifier) == NBClassifier:
-        r = classifier.get_cv_score(train_matrix, train_labels, 5)
+        r = classifier.get_cv_score(train_matrix, train_labels, folds)
     else:
         n_values = np.max(train_labels) + 1
         train_labels_reshape = np.eye(n_values)[train_labels]
-        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 5)
+        r = classifier.get_cv_score(train_matrix, train_labels_reshape, folds)
     # plt.clf()
     # plt.title("Loss, showing all updates".format(n_updates))
     # plt.plot(total_losses)
@@ -336,7 +336,7 @@ def production(data, directory, prefix, rounds):
         [log.debug(f'File found: {fname}') for fname in json_files]
 
     master_list = []
-    for batch in json_files[0:1]:
+    for batch in json_files[0:10]:
         with open(batch) as f:
             log.debug(f'Working with file batch: {batch}')
             dataset = json.load(f)
@@ -347,16 +347,16 @@ def production(data, directory, prefix, rounds):
     # neural_net_classifiers = [NBClassifier()] + build_neural_classifier(500)
 
     # SVM Linear Kernel Classifier
-    svm_classifier = SVMClassifier()
-    run_classifier(svm_classifier, train_matrix, train_labels)
-
-    # Naieve Bayes Classifier
-    nb_classifier = NBClassifier()
-    run_classifier(nb_classifier, train_matrix, train_labels)
+    # svm_classifier = SVMClassifier()
+    # run_classifier(svm_classifier, train_matrix, train_labels)
+    #
+    # # Naieve Bayes Classifier
+    # nb_classifier = NBClassifier()
+    # run_classifier(nb_classifier, train_matrix, train_labels)
 
     # DNN Classifier
     dnn_classifier = production_neural_classifer(rounds, prefix)
-    run_classifier(dnn_classifier, train_matrix, train_labels)
+    run_classifier(dnn_classifier, train_matrix, train_labels, folds=3)
 
 
 if __name__ == "__main__":
