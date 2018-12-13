@@ -17,8 +17,6 @@ Score / NBClassifier                                       1.0                  
 2018-12-10 18:26:56,428-INFO-#  Training loss at round 1600: 3.3175898
 2018-12-10 18:27:02,964-INFO-#  Training loss at round 1800: 3.3172426
 2018-12-10 18:27:09,823-INFO-#  Training loss at round 1999: 3.3190987
-2018-12-10 18:27:10,206-DEBUG-findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('/Users/yaberraf/.julia/v0.6/Conda/deps/usr/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
-2018-12-10 18:27:10,275-DEBUG-findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans ('/Users/yaberraf/.julia/v0.6/Conda/deps/usr/lib/python2.7/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000
 2018-12-10 18:27:10,369-INFO-Accuracy: 0.12403386087596614
 2018-12-10 18:27:10,928-INFO-#  Training loss at round 0: 4.6188617
 2018-12-10 18:27:17,445-INFO-#  Training loss at round 200: 2.7214458
