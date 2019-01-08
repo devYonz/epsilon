@@ -1,10 +1,6 @@
 (epsilon)$ python src/run.py [Expium]
 Data set file recieved: ./datasets/Jumble-for-JIRA.json
  ========  NNClassifier
-2018-12-09 16:03:42.657233: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
- AVX
-2018-12-09 16:03:42.666375: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_thread
-s for best performance.
 2018-12-09 16:03:42,966 - MainThread - classifiers - INFO - #  Training loss at round 0: 4.6302485
 2018-12-09 16:04:13,332 - MainThread - classifiers - INFO - #  Training loss at round 1000: 3.3123994
 2018-12-09 16:04:43,567 - MainThread - classifiers - INFO - #  Training loss at round 1999: 3.3121963

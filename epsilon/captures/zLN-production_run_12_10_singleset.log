@@ -1,5 +1,5 @@
 (epsilon)$ python src/run.py [LN: one set]
-2018-12-10 16:31:40,162-DEBUG-Working with file batch: /mar_18_data.json
+2018-12-10 16:31:40,162-DEBUG-Working with file batch: march-2018
 2018-12-10 16:31:40,293-DEBUG-Processing ticket #0
 2018-12-10 16:31:46,120-DEBUG-Processing ticket #100
 2018-12-10 16:32:04,600-DEBUG-Processing ticket #200
@@ -8,8 +8,6 @@
 2018-12-10 16:34:17,973-DEBUG-Processing ticket #500
 2018-12-10 16:34:58,217-DEBUG-	 Ticket count:559  Duplicates:559 or 0.0%
  ========  NNClassifier
-2018-12-10 16:34:59.338015: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
-2018-12-10 16:34:59.345398: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 2018-12-10 16:34:59,793-INFO-#  Training loss at round 0: 9.9976635
 2018-12-10 16:37:50,722-INFO-#  Training loss at round 1000: 0.018796002
 2018-12-10 16:40:41,031-INFO-#  Training loss at round 2000: 0.0020001684

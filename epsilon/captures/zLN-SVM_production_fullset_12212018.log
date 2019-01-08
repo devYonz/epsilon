@@ -1,0 +1,50 @@
+(epsilon)$ python src/run.py [LinkedIn]
+2018-12-14 17:49:05,730-DEBUG-Processing ticket #0
+2018-12-14 17:49:07,687-DEBUG-Processing ticket #1000
+2018-12-14 17:49:09,741-DEBUG-Processing ticket #2000
+2018-12-14 17:49:11,512-DEBUG-Processing ticket #3000
+2018-12-14 17:49:13,749-DEBUG-Processing ticket #4000
+2018-12-14 17:49:15,362-DEBUG-Processing ticket #5000
+2018-12-14 17:49:17,011-DEBUG-Processing ticket #6000
+2018-12-14 17:49:18,993-DEBUG-Processing ticket #7000
+2018-12-14 17:49:21,114-DEBUG-Processing ticket #8000
+2018-12-14 17:49:22,945-DEBUG-Processing ticket #9000
+2018-12-14 17:49:24,526-DEBUG-Processing ticket #10000
+2018-12-14 17:49:26,431-DEBUG-Processing ticket #11000
+2018-12-14 17:49:28,216-DEBUG-Processing ticket #12000
+2018-12-14 17:49:30,016-DEBUG-Processing ticket #13000
+2018-12-14 17:49:32,073-DEBUG-Processing ticket #14000
+2018-12-14 17:49:34,897-DEBUG-Processing ticket #15000
+2018-12-14 17:49:36,370-DEBUG-Processing ticket #16000
+2018-12-14 17:49:38,691-DEBUG-Processing ticket #17000
+2018-12-14 17:49:40,356-DEBUG-Processing ticket #18000
+2018-12-14 17:49:41,956-DEBUG-Processing ticket #19000
+2018-12-14 17:49:44,204-DEBUG-Processing ticket #20000
+2018-12-14 17:49:46,020-DEBUG-Processing ticket #21000
+2018-12-14 17:49:48,057-DEBUG-Processing ticket #22000
+2018-12-14 17:49:49,598-DEBUG-Processing ticket #23000
+2018-12-14 17:49:51,257-DEBUG-Processing ticket #24000
+2018-12-14 17:49:54,437-DEBUG-Processing ticket #25000
+2018-12-14 17:49:56,700-DEBUG-Processing ticket #26000
+2018-12-14 17:49:58,675-DEBUG-Processing ticket #27000
+2018-12-14 17:50:00,235-DEBUG-Processing ticket #28000
+2018-12-14 17:50:01,865-DEBUG-Processing ticket #29000
+2018-12-14 17:50:03,326-DEBUG-Processing ticket #30000
+2018-12-14 17:50:04,948-DEBUG-Processing ticket #31000
+2018-12-14 17:50:06,796-DEBUG-Processing ticket #32000
+2018-12-14 17:50:09,432-DEBUG-Processing ticket #33000
+2018-12-14 17:50:11,209-DEBUG-Processing ticket #34000
+2018-12-14 17:50:13,296-DEBUG-Processing ticket #35000
+2018-12-14 17:50:15,732-DEBUG-Processing ticket #36000
+2018-12-14 17:50:17,948-DEBUG-Processing ticket #37000
+2018-12-14 17:50:19,622-DEBUG-Processing ticket #38000
+2018-12-14 17:50:20,895-DEBUG-Processing ticket #39000
+2018-12-14 17:50:22,357-DEBUG-Processing ticket #40000
+2018-12-14 17:50:23,897-DEBUG-Processing ticket #41000
+2018-12-14 17:50:25,675-DEBUG-Processing ticket #42000
+2018-12-14 17:50:27,490-DEBUG-Processing ticket #43000
+2018-12-14 17:50:28,369-DEBUG-Completed processing tickets  ticket, building dictionary
+2018-12-14 17:50:35,773-DEBUG-Completed building dictionary, vectorizing tickets
+2018-12-14 17:51:01,356-DEBUG-Ticket count:39817  Duplicates:3666 or 8.430881033967298%
+ ========  SVMClassifier
+Classifier train accuracy:0.9995729022931862  and testaccuacy: 0.40827903411268684

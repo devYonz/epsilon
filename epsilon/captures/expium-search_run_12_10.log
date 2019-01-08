@@ -1,11 +1,9 @@
 Data set file received: ./datasets/Jumble-for-JIRA.json
  ========  SVMClassifier
-Classifier sccuracy: 1.0 on same trained samples
+Classifier accuracy: 1.0 on trained samples
  ========  NBClassifier
 Score / NBClassifier                                       1.0                       1.0                       0.0
  ========  NNClassifier
-2018-12-10 18:26:00.836633: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
-2018-12-10 18:26:00.838098: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 8. Tune using inter_op_parallelism_threads for best performance.
 2018-12-10 18:26:01,181-INFO-#  Training loss at round 0: 4.6119814
 2018-12-10 18:26:07,972-INFO-#  Training loss at round 200: 3.320428
 2018-12-10 18:26:14,985-INFO-#  Training loss at round 400: 3.3200269
