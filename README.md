@@ -23,4 +23,8 @@ Project Epsilon aims to eliminate this overhead by experimenting with supervised
 The input to our algorithm is a collection of historic JIRA tickets in JSON format. These tickets are preprocessed and featurized and following which we predict the assignee for new or unassigned tickets using 3 different methods: SVM, Naive Bayesian and Deep Neural Network Classifiers. We then compare the performance for these 3 methods as pertaining to 2 primary input datasets: a public Expium generated dataset as well as a dataset with real Jira tickets from Linkedin.
 
 
+After complteing a grid search with 5-Fold cross vlaidation across multiple parameters the winner with the best performance has been found to be: 3-32.relu.0.005  Mean Train Accuracy: 0.999379073598363  Mean Test Accuracy: 0.28183346116770486  -0.7175456124306581
+
+The next step is to onboard to word2vec and pandas to look through the data available.
+
 ## We invite you to look over the report and code for more details.

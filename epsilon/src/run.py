@@ -188,7 +188,7 @@ def run_classifier(classifier, train_matrix, train_labels, folds=5):
         # Convert to one-hot representation for DNN
         n_values = np.max(train_labels) + 1
         train_labels_reshape = np.eye(n_values)[train_labels]
-        r = classifier.get_cv_score(train_matrix, train_labels_reshape, 2)
+        r = classifier.get_cv_score(train_matrix, train_labels_reshape, folds)
         # plt.clf()
         # plt.title("Loss, showing all updates".format(n_updates))
         # plt.plot(total_losses)
@@ -246,7 +246,7 @@ def search(data, prefix, directory):
         else:
             n_values = np.max(train_labels) + 1
             train_labels_reshape = np.eye(n_values)[train_labels]
-            r = classifier.get_cv_score(train_matrix, train_labels_reshape, 2)
+            r = classifier.get_cv_score(train_matrix, train_labels_reshape, 5)
             # plt.clf()
             # plt.title("Loss, showing all updates".format(n_updates))
             # plt.plot(total_losses)
@@ -283,14 +283,17 @@ def production(data, directory, prefix, rounds):
     # SVM Linear Kernel Classifier
     svm_classifier = SVMClassifier()
     run_classifier(svm_classifier, train_matrix, train_labels)
+    log.debug('Completed SVM run')
 
     # Naieve Bayes Classifier
     nb_classifier = NBClassifier()
     run_classifier(nb_classifier, train_matrix, train_labels)
+    log.debug('Completed NB run')
 
     # DNN Classifier
     dnn_classifier = production_neural_classifer(rounds, prefix)
-    run_classifier(dnn_classifier, train_matrix, train_labels, folds=3)
+    run_classifier(dnn_classifier, train_matrix, train_labels, folds=5)
+    log.debug('Completed DNN run')
 
 
 if __name__ == "__main__":
